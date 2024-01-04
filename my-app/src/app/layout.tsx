@@ -3,7 +3,8 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/contexts/theme/theme-provider";
-import { Aside } from "@/components/aside/aside";
+import { NavBar } from "@/components/navigation/nav-bar/nav-bar";
+import { AsideBar } from "@/components/navigation/aside-bar/aside";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -21,10 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body
         className={cn(
-          "text-foreground flex font-sans antialiased",
+          "text-foreground flex  flex-col lg:flex-row font-sans antialiased  bg-background",
           fontSans.variable
         )}
       >
@@ -34,7 +35,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Aside />
+          <AsideBar />
+          <NavBar />
           <div className="flex-1">{children}</div>
         </ThemeProvider>
       </body>

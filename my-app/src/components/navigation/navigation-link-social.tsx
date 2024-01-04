@@ -1,12 +1,11 @@
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 import { ElementType } from "react";
 interface AsideLinkSocialProps {
   href: string;
   title: string;
   icon: ElementType;
 }
-export function AsideLinkSocial({
+export function NavigationLinkSocial({
   title,
   href,
   icon: Icon,

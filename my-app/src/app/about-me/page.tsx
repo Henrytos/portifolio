@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <Container>
-      <h1 className="text-muted-foreground"> hello world sobre min</h1>
+      <h1 className="text-"> hello world sobre min</h1>
       <Button>click</Button>
       <ThemeToggle />
     </Container>
