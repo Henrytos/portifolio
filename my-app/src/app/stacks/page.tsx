@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <main className="">
-      <h1> hello world</h1>
+      <h1 className="text-"> hello world stcks</h1>
       <Button>click</Button>
       <ThemeToggle />
     </main>
