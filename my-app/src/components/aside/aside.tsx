@@ -1,3 +1,4 @@
+"use client";
 import {
   BookOpen,
   FolderDot,
@@ -9,17 +10,40 @@ import {
 } from "lucide-react";
 import { AsideLink } from "./aside-link";
 import { AsideLinkSocial } from "./aside-link-social";
+import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/contexts/theme/theme-togle";
 
 export function Aside() {
+  const curretPath = usePathname();
   return (
-    <div className="w-full max-w-96">
+    <div className="w-full max-w-80">
       <aside className="min-h-[calc(100vh_-_3.5rem)] flex flex-col gap-4   p-3 text-foreground border-r ">
-        <AsideLink href="/" icon={Home} title="Início" />
+        <AsideLink
+          href="/"
+          icon={Home}
+          title="Início"
+          curretPath={curretPath}
+        />
         <div>
           <p className="text-zinc-500 text-sm font-semibold pl-4 pb-1">Eu</p>
-          <AsideLink href="/about-me" icon={BookOpen} title="Sobre mim" />
-          <AsideLink href="/projects" icon={FolderDot} title="Projetos" />
-          <AsideLink href="/stacks" icon={Laptop} title="Tecnologias" />
+          <AsideLink
+            href="/about-me"
+            icon={BookOpen}
+            title="Sobre mim"
+            curretPath={curretPath}
+          />
+          <AsideLink
+            href="/projects"
+            icon={FolderDot}
+            title="Projetos"
+            curretPath={curretPath}
+          />
+          <AsideLink
+            href="/stacks"
+            icon={Laptop}
+            title="Tecnologias"
+            curretPath={curretPath}
+          />
         </div>
         <div>
           <p className="text-zinc-500 text-sm font-semibold pl-4 pb-1">
@@ -47,6 +71,8 @@ export function Aside() {
           Desevolvindo em por <span className="font-semibold">henry</span>{" "}
           &copy;{"   "} {new Date().getFullYear()}
         </p>
+
+        <ThemeToggle />
       </div>
     </div>
   );
