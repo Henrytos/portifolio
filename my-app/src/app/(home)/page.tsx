@@ -9,8 +9,8 @@ export default function Home() {
       <Text>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
         dignissimos!
-        <Badge>Javascript</Badge>
       </Text>
+      <Badge>Javascript</Badge>
     </Container>
   );
 }

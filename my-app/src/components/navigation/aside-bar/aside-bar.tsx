@@ -12,6 +12,7 @@ import { NavigationLink } from "../navigation-link";
 import { NavigationLinkSocial } from "../navigation-link-social";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/contexts/theme/theme-togle";
+import { NavigationTitle } from "../navigation-title";
 
 export function AsideBar() {
   const curretPath = usePathname();
@@ -25,7 +26,7 @@ export function AsideBar() {
           curretPath={curretPath}
         />
         <div>
-          <p className="text-zinc-500 text-sm font-semibold pl-4 pb-1">Eu</p>
+          <NavigationTitle>Eu</NavigationTitle>
           <NavigationLink
             href="/about-me"
             icon={BookOpen}
@@ -46,9 +47,7 @@ export function AsideBar() {
           />
         </div>
         <div>
-          <p className="text-zinc-500 text-sm font-semibold pl-4 pb-1">
-            Redes Socias
-          </p>
+          <NavigationTitle>Redes Socias</NavigationTitle>
           <NavigationLinkSocial
             href="https://github.com/Henrytos"
             icon={Github}

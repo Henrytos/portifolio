@@ -20,7 +20,7 @@ export function NavigationLink({
     <Link
       href={href}
       className={clsx(
-        "group flex gap-2 items-center py-2 px-4 bg-background rounded-md hover:bg-secondary transition-colors ",
+        "group flex gap-2 items-center py-2 px-4 bg-background  hover:bg-secondary transition-colors ",
         linkActive && "bg-secondary"
       )}
     >
