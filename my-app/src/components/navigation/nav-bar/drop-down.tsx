@@ -15,7 +15,7 @@ import {
   Instagram,
   Laptop,
   Linkedin,
-  Settings,
+  Menu,
 } from "lucide-react";
 import { NavigationLinkSocial } from "../navigation-link-social";
 import { NavigationTitle } from "../navigation-title";
@@ -26,7 +26,7 @@ export function DropDown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="border px-2">
-        <Settings />
+        <Menu />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-screen">
         <DropDownLink href="/" icon={Home}>
