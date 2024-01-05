@@ -10,40 +10,47 @@ import {
 } from "lucide-react";
 import { NavigationLink } from "../navigation-link";
 import { NavigationLinkSocial } from "../navigation-link-social";
-import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/contexts/theme/theme-togle";
 import { NavigationTitle } from "../navigation-title";
+import { usePathname } from "next/navigation";
+import { MyPersonSmall } from "../my-person-small";
 
 export function AsideBar() {
-  const curretPath = usePathname();
+  const currentPath = usePathname();
   return (
     <div className="hidden lg:block w-full max-w-80 bg-background/45">
       <aside className="min-h-[calc(100vh_-_3.5rem)] flex flex-col gap-4   p-3 text-foreground border-r ">
+        {currentPath != "/" && (
+          <div className="pl-4">
+            {" "}
+            <MyPersonSmall />
+          </div>
+        )}
         <NavigationLink
+          currentPath={currentPath}
           href="/"
           icon={Home}
           title="Início"
-          curretPath={curretPath}
         />
         <div>
           <NavigationTitle>Eu</NavigationTitle>
           <NavigationLink
+            currentPath={currentPath}
             href="/about-me"
             icon={BookOpen}
             title="Sobre mim"
-            curretPath={curretPath}
           />
           <NavigationLink
+            currentPath={currentPath}
             href="/projects"
             icon={FolderDot}
             title="Projetos"
-            curretPath={curretPath}
           />
           <NavigationLink
+            currentPath={currentPath}
             href="/stacks"
             icon={Laptop}
             title="Tecnologias"
-            curretPath={curretPath}
           />
         </div>
         <div>

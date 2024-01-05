@@ -1,4 +1,4 @@
-import { Badge } from "@/components/badge";
+import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/container";
 import { Text } from "@/components/text";
 
@@ -10,7 +10,9 @@ export default function Home() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
         dignissimos!
       </Text>
-      <Badge>Javascript</Badge>
+      <Badge variant={"secondary"} className="rounded">
+        Javascript
+      </Badge>
     </Container>
   );
 }

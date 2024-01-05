@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "name": "Project 1",
+      "description": "This is a project description",
+      "linkPage": "http://www.google.com",
+      "linkRepo": "http://www.google.com",
+      "srcImg": "http://www.google.com",
+      "stacksUsed": [
+        {
+          "name": "Stack 1",
+          "srcImg": "http://www.google.com",
+          "bgColor": "#000000"
+        }
+      ]
+    },
+    {
+      "name": "Project 1",
+      "description": "This is a project description",
+      "linkPage": "http://www.google.com",
+      "linkRepo": "http://www.google.com",
+      "srcImg": "http://www.google.com",
+      "stacksUsed": [
+        {
+          "name": "Stack 1",
+          "srcImg": "http://www.google.com",
+          "bgColor": "#000000"
+        }
+      ]
+    }
+  ],
+  "stacks": {
+    "frontEnd": [
+      {
+        "name": "Stack 1",
+        "srcImg": "http://www.google.com",
+        "bgColor": "#000000"
+      }
+    ],
+    "backEnd": [
+      {
+        "name": "Stack 1",
+        "srcImg": "http://www.google.com",
+        "bgColor": "#000000"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Stack 1",
+        "srcImg": "http://www.google.com",
+        "bgColor": "#000000"
+      }
+    ]
+  }
+}

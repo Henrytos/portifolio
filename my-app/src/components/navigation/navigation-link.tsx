@@ -5,7 +5,7 @@ import { ElementType } from "react";
 interface AsideLinkProps {
   href: string;
   title: string;
-  curretPath: string;
+  currentPath: string;
   icon: ElementType;
 }
 
@@ -13,9 +13,9 @@ export function NavigationLink({
   title,
   href,
   icon: Icon,
-  curretPath,
+  currentPath,
 }: AsideLinkProps) {
-  const linkActive = href == curretPath;
+  const linkActive = href == currentPath;
   return (
     <Link
       href={href}
