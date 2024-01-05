@@ -34,6 +34,7 @@ export default async function ProjectsPage() {
           <CardProject {...project} key={project.name} />
         ))}
       </CardConatiner>
+      <SubTitle clasName="mb-4">Full-stack</SubTitle>
     </Container>
   );
 }
