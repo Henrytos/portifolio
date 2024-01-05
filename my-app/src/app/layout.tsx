@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/contexts/theme/theme-provider";
 import { NavBar } from "@/components/navigation/nav-bar/nav-bar";
 import { AsideBar } from "@/components/navigation/aside-bar/aside-bar";
+import Head from "next/head";
 
 export const fontSans = FontSans({
   subsets: ["latin"],

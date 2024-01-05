@@ -18,21 +18,23 @@ import { MyPersonSmall } from "../my-person-small";
 export function AsideBar() {
   const currentPath = usePathname();
   return (
-    <div className="hidden lg:block w-full max-w-80 bg-background/45">
-      <aside className="min-h-[calc(100vh_-_3.5rem)] flex flex-col gap-4   p-3 text-foreground border-r ">
+    <div className="hidden lg:block w-full max-w-72 bg-background/45">
+      <aside className="min-h-[calc(100vh_-_3.5rem)] text-foreground border-r pt-4 ">
         {currentPath != "/" && (
-          <div className="pl-4">
+          <div className="pl-4 pb-4 mb-4 border-b">
             {" "}
             <MyPersonSmall />
           </div>
         )}
-        <NavigationLink
-          currentPath={currentPath}
-          href="/"
-          icon={Home}
-          title="Início"
-        />
-        <div>
+
+        <nav className="px-3">
+          <NavigationLink
+            currentPath={currentPath}
+            href="/"
+            icon={Home}
+            title="Início"
+          />
+
           <NavigationTitle>Eu</NavigationTitle>
           <NavigationLink
             currentPath={currentPath}
@@ -52,8 +54,7 @@ export function AsideBar() {
             icon={Laptop}
             title="Tecnologias"
           />
-        </div>
-        <div>
+
           <NavigationTitle>Redes Socias</NavigationTitle>
           <NavigationLinkSocial
             href="https://github.com/Henrytos"
@@ -70,7 +71,7 @@ export function AsideBar() {
             icon={Instagram}
             title="Instagram"
           />
-        </div>
+        </nav>
       </aside>
       <div className="h-14 mt-auto flex items-center justify-between  border-t border-r px-6">
         <p className="font-light text-sm text-foreground">

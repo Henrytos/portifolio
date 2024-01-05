@@ -31,7 +31,7 @@ export function NavigationLink({
           "group-hover:text-primary"
         )}
       />
-      <span className="font-semibold text-sm -translate-y-px">{title}</span>
+      <span className="font-medium text-sm -translate-y-px">{title}</span>
     </Link>
   );
 }

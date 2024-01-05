@@ -17,7 +17,7 @@ export function NavigationLinkSocial({
       className="group flex gap-2 items-center py-2 px-4 bg-background rounded-lg hover:bg-secondary transition-colors"
     >
       <Icon className=" w-4 h-4 group-hover:text-primary" />
-      <span className="font-semibold text-sm -translate-y-px ">{title}</span>
+      <span className="font-medium text-sm -translate-y-px ">{title}</span>
 
       <ArrowUpRight className=" ml-auto w-4 h-4 group-hover:text-primary" />
     </a>

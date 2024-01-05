@@ -5,6 +5,8 @@ interface NavigationTitleProps {
 }
 export function NavigationTitle({ children }: NavigationTitleProps) {
   return (
-    <p className="text-zinc-500 text-sm font-semibold pl-4 pb-1">{children}</p>
+    <p className="text-zinc-500 text-sm font-semibold pl-4 pb-2 pt-4">
+      {children}
+    </p>
   );
 }
