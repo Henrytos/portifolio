@@ -7,7 +7,6 @@ import { SubTitle } from "@/components/sub-title";
 import { CardProject } from "@/components/card-project/card-project";
 import { CardConatiner } from "@/components/card-project/card-conatiner";
 import { fetchProjects } from "@/services/fetch";
-import { ProjectType } from "@/types/type-response";
 
 export const metadata: Metadata = {
   title: "Projetos",
@@ -15,8 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ProjectsPage() {
-  //  const Projects = await fetchProjects();
-  const Projects: ProjectType[] = [];
+  const Projects = await fetchProjects();
   return (
     <Container>
       <Title className="mb-2">Meus Projetos</Title>
