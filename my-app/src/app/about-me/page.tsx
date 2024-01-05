@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "página sobre min",
 };
 
-export default function Home() {
+export default function AboutMepAge() {
   return (
     <Container>
       <h1 className="text-"> hello world sobre min</h1>

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Minhas habilidade e tecnologias",
 };
 
-export default function Home() {
+export default function StacksPage() {
   return (
     <Container>
       <h1 className="text-muted-foreground"> hello world stcks</h1>

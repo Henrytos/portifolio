@@ -1,19 +1,39 @@
-import { ThemeToggle } from "@/contexts/theme/theme-togle";
-import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import { Container } from "@/components/container";
+import { Title } from "@/components/title";
+import { Text } from "@/components/text";
+import { Github } from "lucide-react";
+import { SubTitle } from "@/components/sub-title";
+import { CardProject } from "@/components/card-project/card-project";
+import { CardConatiner } from "@/components/card-project/card-conatiner";
+import { fetchProjects } from "@/services/fetch";
 
 export const metadata: Metadata = {
   title: "Projetos",
   description: "Meus projetos",
 };
 
-export default function Home() {
+export default async function ProjectsPage() {
+  const Projects = await fetchProjects();
   return (
     <Container>
-      <h1 className="text-"> hello world projects ;-;</h1>
-      <Button>click</Button>
-      <ThemeToggle />
+      <Title className="mb-2">Meus Projetos</Title>
+      <Text clasName="mb-6">
+        Aqui esta algums Projetos que desenvolvi,todos estão no meu{" "}
+        <a
+          href="https://github.com/Henrytos"
+          target="_blank"
+          className="text-primary underline"
+        >
+          Git Hub <Github size={18} className="inline -translate-y-0.5" />
+        </a>{" "}
+      </Text>
+      <SubTitle clasName="mb-4">Front-end</SubTitle>
+      <CardConatiner>
+        {Projects?.map((project) => (
+          <CardProject {...project} key={project.name} />
+        ))}
+      </CardConatiner>
     </Container>
   );
 }

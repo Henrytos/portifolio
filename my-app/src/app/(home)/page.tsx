@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/container";
 import { Text } from "@/components/text";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <Container>
       <Text>

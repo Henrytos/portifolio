@@ -10,5 +10,4 @@ export interface ProjectType {
   srcImg: string;
   linkPage: string;
   linkRepo: string;
-  stacksUsed: StackType[];
 }

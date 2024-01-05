@@ -1,32 +1,46 @@
 {
   "projects": [
     {
-      "name": "Project 1",
-      "description": "This is a project description",
-      "linkPage": "http://www.google.com",
-      "linkRepo": "http://www.google.com",
-      "srcImg": "http://www.google.com",
-      "stacksUsed": [
-        {
-          "name": "Stack 1",
-          "srcImg": "http://www.google.com",
-          "bgColor": "#000000"
-        }
-      ]
+      "name": "Imposto de Renda",
+      "description": "Aplicação web para conscientizar pessoas sobre o imposto de renda e fazer calculo de Imposto de renda  ",
+      "linkPage": "https://spotify-raqf.vercel.app/",
+      "linkRepo": "https://github.com/Henrytos/imposto-de-renda",
+      "srcImg": "/imgs/projects/imposto-de-renda.png"
     },
     {
-      "name": "Project 1",
-      "description": "This is a project description",
-      "linkPage": "http://www.google.com",
-      "linkRepo": "http://www.google.com",
-      "srcImg": "http://www.google.com",
-      "stacksUsed": [
-        {
-          "name": "Stack 1",
-          "srcImg": "http://www.google.com",
-          "bgColor": "#000000"
-        }
-      ]
+      "name": "Academia Xhealth ",
+      "description": "Aplicação web feita como desafio de um hackaton onde o intuito é fazer um Site de uma academia imaginária  ",
+      "linkPage": "https://academia-xhealth.vercel.app/",
+      "linkRepo": "https://github.com/Henrytos/Academia-XHEALTH",
+      "srcImg": "/imgs/projects/academia-x-health.png"
+    },
+    {
+      "name": "Hunger in Afric",
+      "description": "Um site desenvolvida com intuito de conceitizar as pessoas sobre a fome na africa",
+      "linkPage": "https://hunger-in-africa.vercel.app/",
+      "linkRepo": "https://github.com/Henrytos/hungerInAfrica",
+      "srcImg": "/imgs/projects/hunger-in-africa.png"
+    },
+    {
+      "name": "One bit X",
+      "description": "Um site desenvolvida com intuito de conceitizar as pessoas sobre a fome na africa",
+      "linkPage": "https://onebit-x-xi.vercel.app/home.html",
+      "linkRepo": "https://github.com/Henrytos/onebitX",
+      "srcImg": "/imgs/projects/one-bit-x.png"
+    },
+    {
+      "name": "Calc Js",
+      "description": "dessa vez crie uma calculadora Usando DOM(document object model) uma forma de manipulas css html e js",
+      "linkPage": "https://henrytos.github.io/calc.js/",
+      "linkRepo": "https://github.com/Henrytos/calc.js",
+      "srcImg": "/imgs/projects/calc-js.png"
+    },
+    {
+      "name": "Genereto Qr",
+      "description": "um site que tem a capacidade de gerar qr code para qualquer carcter utilizei um Biblioteca para isso",
+      "linkPage": "https://henrytos.github.io/Genereto/",
+      "linkRepo": "https://github.com/Henrytos/Genereto",
+      "srcImg": "/imgs/projects/genereto-qr.png"
     }
   ],
   "stacks": {

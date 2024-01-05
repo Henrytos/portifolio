@@ -37,7 +37,7 @@ export default function RootLayout({
         >
           <SideBar />
           <NavBar />
-          <div className="flex-1">{children}</div>
+          <div className="flex-1 lg:overflow-auto">{children}</div>
         </ThemeProvider>
       </body>
     </html>
