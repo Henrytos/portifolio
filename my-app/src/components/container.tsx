@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 export function Container({ children }: ContainerProps) {
   return (
-    <main className="w-full max-w-4xl min-h-[calc(100vh_-_4rem)] lg:min-h-screen m-auto mt-16 lg:mt-0 px-4 sm:px-14 pt-8 lg:pt-14">
+    <main className="w-full max-w-4xl min-h-[calc(100vh_-_4rem)] lg:h-screen m-auto mt-16 lg:mt-0 px-4 sm:px-14 pt-8 lg:pt-14 lg:overflow-auto">
       {children}
     </main>
   );

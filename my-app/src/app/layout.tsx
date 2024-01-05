@@ -4,8 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/contexts/theme/theme-provider";
 import { NavBar } from "@/components/navigation/nav-bar/nav-bar";
-import { AsideBar } from "@/components/navigation/aside-bar/aside-bar";
-import Head from "next/head";
+import { SideBar } from "@/components/navigation/side-bar/side-bar";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -26,7 +25,7 @@ export default function RootLayout({
     <html lang="pt">
       <body
         className={cn(
-          "text-foreground flex  flex-col lg:flex-row font-sans antialiased  bg-background",
+          "text-foreground flex  flex-col lg:flex-row font-sans antialiased  bg-background relative",
           fontSans.variable
         )}
       >
@@ -36,7 +35,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AsideBar />
+          <SideBar />
           <NavBar />
           <div className="flex-1">{children}</div>
         </ThemeProvider>

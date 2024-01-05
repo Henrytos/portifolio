@@ -15,10 +15,10 @@ import { NavigationTitle } from "../navigation-title";
 import { usePathname } from "next/navigation";
 import { MyPersonSmall } from "../my-person-small";
 
-export function AsideBar() {
+export function SideBar() {
   const currentPath = usePathname();
   return (
-    <div className="hidden lg:block w-full max-w-72 bg-background/45">
+    <div className="hidden lg:block w-full max-w-72 bg-background/45 ">
       <aside className="min-h-[calc(100vh_-_3.5rem)] text-foreground border-r pt-4 ">
         {currentPath != "/" && (
           <div className="pl-4 pb-4 mb-4 border-b">
@@ -28,49 +28,40 @@ export function AsideBar() {
         )}
 
         <nav className="px-3">
-          <NavigationLink
-            currentPath={currentPath}
-            href="/"
-            icon={Home}
-            title="Início"
-          />
+          <NavigationLink href="/" icon={Home}>
+            Início
+          </NavigationLink>
 
           <NavigationTitle>Eu</NavigationTitle>
-          <NavigationLink
-            currentPath={currentPath}
-            href="/about-me"
-            icon={BookOpen}
-            title="Sobre mim"
-          />
-          <NavigationLink
-            currentPath={currentPath}
-            href="/projects"
-            icon={FolderDot}
-            title="Projetos"
-          />
-          <NavigationLink
-            currentPath={currentPath}
-            href="/stacks"
-            icon={Laptop}
-            title="Tecnologias"
-          />
+          <NavigationLink href="/about-me" icon={BookOpen}>
+            Sobre min
+          </NavigationLink>
+          <NavigationLink href="/projects" icon={FolderDot}>
+            Projetos
+          </NavigationLink>
+          <NavigationLink href="/stacks" icon={Laptop}>
+            Tecnologias
+          </NavigationLink>
 
           <NavigationTitle>Redes Socias</NavigationTitle>
           <NavigationLinkSocial
             href="https://github.com/Henrytos"
             icon={Github}
-            title="Git hub"
-          />
+          >
+            Git Hub
+          </NavigationLinkSocial>
           <NavigationLinkSocial
             href="https://www.linkedin.com/in/henry-franz-617841245/"
             icon={Linkedin}
-            title="Linkedin"
-          />
+          >
+            Linkedin
+          </NavigationLinkSocial>
           <NavigationLinkSocial
             href="https://www.instagram.com/dev_henry16/"
             icon={Instagram}
-            title="Instagram"
-          />
+          >
+            Instagram
+          </NavigationLinkSocial>
         </nav>
       </aside>
       <div className="h-14 mt-auto flex items-center justify-between  border-t border-r px-6">

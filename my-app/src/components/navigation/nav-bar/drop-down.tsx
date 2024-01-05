@@ -53,22 +53,25 @@ export function DropDown() {
           <NavigationLinkSocial
             href="https://github.com/Henrytos"
             icon={Github}
-            title="Git hub"
-          />
+          >
+            Git Hub
+          </NavigationLinkSocial>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <NavigationLinkSocial
             href="https://www.linkedin.com/in/henry-franz-617841245/"
             icon={Linkedin}
-            title="Linkedin"
-          />
+          >
+            Linkedin
+          </NavigationLinkSocial>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <NavigationLinkSocial
             href="https://www.instagram.com/dev_henry16/"
             icon={Instagram}
-            title="Instagram"
-          />
+          >
+            Instagram
+          </NavigationLinkSocial>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

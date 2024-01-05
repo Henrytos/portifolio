@@ -1,24 +1,25 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { ElementType } from "react";
+import { usePathname } from "next/navigation";
+import { ComponentProps, ElementType, ReactNode } from "react";
 
-interface AsideLinkProps {
-  href: string;
-  title: string;
-  currentPath: string;
+interface AsideLinkProps extends ComponentProps<"a"> {
+  children: ReactNode;
   icon: ElementType;
 }
 
 export function NavigationLink({
-  title,
-  href,
+  children,
   icon: Icon,
-  currentPath,
+  ...props
 }: AsideLinkProps) {
+  const { href } = { ...props };
+  const currentPath = usePathname();
   const linkActive = href == currentPath;
+
   return (
     <Link
-      href={href}
+      href={href ?? ""}
       className={clsx(
         "group flex gap-2 items-center py-2 px-4 bg-background  hover:bg-secondary transition-colors ",
         linkActive && "bg-secondary"
@@ -31,7 +32,7 @@ export function NavigationLink({
           "group-hover:text-primary"
         )}
       />
-      <span className="font-medium text-sm -translate-y-px">{title}</span>
+      <span className="font-medium text-sm -translate-y-px">{children}</span>
     </Link>
   );
 }

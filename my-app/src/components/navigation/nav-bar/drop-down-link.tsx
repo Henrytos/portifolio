@@ -2,19 +2,19 @@ import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ElementType, ReactNode } from "react";
+import { ComponentProps, ElementType, ReactNode } from "react";
 
-interface DropDownLinkProps {
+interface DropDownLinkProps extends ComponentProps<"a"> {
   children: ReactNode;
-  href: string;
   icon: ElementType;
 }
 export function DropDownLink({
-  href,
   children,
   icon: Icon,
+  ...props
 }: DropDownLinkProps) {
   const currentPath = usePathname();
+  const href = { ...props };
   return (
     <DropdownMenuItem
       className={clsx(
