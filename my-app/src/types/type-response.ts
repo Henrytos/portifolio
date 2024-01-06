@@ -1,7 +1,13 @@
 export interface StackType {
   name: string;
   srcImg: string;
-  bgColor: string;
+  srcDocumentation: string;
+}
+
+export interface StackResponseType {
+  frontEnd: StackType[];
+  backEnd: StackType[];
+  tools: StackType[];
 }
 
 export interface ProjectType {

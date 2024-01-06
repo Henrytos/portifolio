@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt">
+    <html lang="pt-br">
       <body
         className={cn(
           "text-foreground flex  flex-col lg:flex-row font-sans antialiased  bg-background relative",

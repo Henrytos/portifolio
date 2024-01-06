@@ -10,22 +10,15 @@ import {
 } from "lucide-react";
 import { NavigationLink } from "../navigation-link";
 import { NavigationLinkSocial } from "../navigation-link-social";
-import { ThemeToggle } from "@/contexts/theme/theme-togle";
 import { NavigationTitle } from "../navigation-title";
-import { usePathname } from "next/navigation";
 import { MyPersonSmall } from "../my-person-small";
+import { FooterAsideBar } from "./footer-side-bar";
 
 export function SideBar() {
-  const currentPath = usePathname();
   return (
     <div className="hidden lg:block w-full max-w-72 bg-background/45 ">
       <aside className="min-h-[calc(100vh_-_3.5rem)] text-foreground border-r pt-4 ">
-        {currentPath != "/" && (
-          <div className="pl-4 pb-4 mb-4 border-b">
-            {" "}
-            <MyPersonSmall />
-          </div>
-        )}
+        <MyPersonSmall />
 
         <nav className="px-3">
           <NavigationLink href="/" icon={Home}>
@@ -64,14 +57,7 @@ export function SideBar() {
           </NavigationLinkSocial>
         </nav>
       </aside>
-      <div className="h-14 mt-auto flex items-center justify-between  border-t border-r px-6">
-        <p className="font-light text-sm text-foreground">
-          Desevolvindo em por <span className="font-semibold">henry</span>{" "}
-          &copy;{"   "} {new Date().getFullYear()}
-        </p>
-
-        <ThemeToggle />
-      </div>
+      <FooterAsideBar />
     </div>
   );
 }

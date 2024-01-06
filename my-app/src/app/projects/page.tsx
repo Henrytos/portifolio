@@ -6,15 +6,14 @@ import { Github } from "lucide-react";
 import { SubTitle } from "@/components/sub-title";
 import { CardProject } from "@/components/card-project/card-project";
 import { CardConatiner } from "@/components/card-project/card-conatiner";
-import { fetchProjects } from "@/services/fetch";
+import { Projects } from "@/database/database";
 
 export const metadata: Metadata = {
   title: "Projetos",
   description: "Meus projetos",
 };
 
-export default async function ProjectsPage() {
-  const Projects = await fetchProjects();
+export default function ProjectsPage() {
   return (
     <Container>
       <Title className="mb-2">Meus Projetos</Title>

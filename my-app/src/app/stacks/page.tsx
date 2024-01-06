@@ -1,19 +1,18 @@
 import { Metadata } from "next";
 import { Container } from "@/components/container";
-import { fetchStacks } from "@/services/fetch";
-import { StackResponseType } from "@/types/type-response";
 import { Title } from "@/components/title";
 import { Text } from "@/components/text";
-import Image from "next/image";
 import { SubTitle } from "@/components/sub-title";
+import { Stacks } from "@/database/database";
+import { MyStack } from "@/components/my-stacks/my-stack";
+import { ContainerStack } from "@/components/my-stacks/containe-stack";
 
 export const metadata: Metadata = {
   title: "Habilidades",
   description: "Minhas habilidade e tecnologias",
 };
 
-export default async function StacksPage() {
-  const Stacks: StackResponseType = await fetchStacks();
+export default function StacksPage() {
   const { frontEnd, backEnd, tools } = Stacks;
   return (
     <Container>
@@ -23,33 +22,31 @@ export default async function StacksPage() {
         de desenvolvimento. desde front-end até back-end
       </Text>
       <SubTitle clasName="mb-2">Front end</SubTitle>
-      <div className="grid grid-cols-4 gap-2 mb-6">
+      <ContainerStack>
         {frontEnd.map((stack) => (
-          <a
-            href={stack.srcDocumentation}
-            target="_blank"
-            key={stack.srcImg}
-            className="group backdrop-blur-3xl flex items-center gap-2 h-16 
-            bg-secondary dark:bg-secondary/50 hover:bg-primary/15 hover:dark:bg-secondary  p-3 rounded-[.5rem] transition-all"
-          >
-            <div className="bg-primary/5  dark:bg-secondary/70 p-2 rounded border-primary-foreground dark:group-hover:bg-primary/15 group-hover:bg-primary/30  transition-colors">
-              <Image
-                width={10}
-                height={10}
-                alt={stack.name}
-                className="h-8 w-8"
-                src={stack.srcImg}
-              />
-            </div>
-
-            <span className="text-secondary-foreground font-light antialiased ">
-              {stack.name}
-            </span>
-          </a>
+          <MyStack {...stack} key={stack.name}>
+            {stack.name}
+          </MyStack>
         ))}
-      </div>
+      </ContainerStack>
 
       <SubTitle clasName="mb-4">Back end</SubTitle>
+      <ContainerStack>
+        {backEnd.map((stack) => (
+          <MyStack {...stack} key={stack.name}>
+            {stack.name}
+          </MyStack>
+        ))}
+      </ContainerStack>
+
+      <SubTitle clasName="mb-4">Ferramentas</SubTitle>
+      <ContainerStack>
+        {tools.map((stack) => (
+          <MyStack {...stack} key={stack.name}>
+            {stack.name}
+          </MyStack>
+        ))}
+      </ContainerStack>
     </Container>
   );
 }
