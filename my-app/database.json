@@ -46,9 +46,65 @@
   "stacks": {
     "frontEnd": [
       {
-        "name": "Stack 1",
-        "srcImg": "http://www.google.com",
-        "bgColor": "#000000"
+        "name": "Html",
+        "srcImg": "/imgs/stacks/html.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://www.w3schools.com/html/default.asp"
+      },
+      {
+        "name": "Css",
+        "srcImg": "/imgs/stacks/css.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://www.w3schools.com/css/default.asp"
+      },
+      {
+        "name": "Javascript",
+        "srcImg": "/imgs/stacks/javascript.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://www.w3schools.com/js/default.asp"
+      },
+      {
+        "name": "Typescript",
+        "srcImg": "/imgs/stacks/typescript.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://www.typescriptlang.org"
+      },
+
+      {
+        "name": "React",
+        "srcImg": "/imgs/stacks/react.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://nextjs.org/"
+      },
+      {
+        "name": "React Router",
+        "srcImg": "/imgs/stacks/react-router.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://reactrouter.com/en/main"
+      },
+      {
+        "name": "Radix",
+        "srcImg": "/imgs/stacks/radix.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://reactrouter.com/en/main"
+      },
+      {
+        "name": "Next Js",
+        "srcImg": "/imgs/stacks/nextjs.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://react.dev"
+      },
+      {
+        "name": "Tailwind Css",
+        "srcImg": "/imgs/stacks/typescript.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://tailwindcss.com"
+      },
+      {
+        "name": "Vite",
+        "srcImg": "/imgs/stacks/vite.svg",
+        "bgColor": "#000000",
+        "srcDocumentation": "https://vitejs.dev/"
       }
     ],
     "backEnd": [
