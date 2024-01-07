@@ -21,7 +21,7 @@ export default function StacksPage() {
         Aqui estão algumas tecnologias e ferramentas que eu uso no meu dia a dia
         de desenvolvimento. desde front-end até back-end
       </Text>
-      <SubTitle clasName="mb-2">Front end</SubTitle>
+      <SubTitle className="mb-2">Front end</SubTitle>
       <ContainerStack>
         {frontEnd.map((stack) => (
           <MyStack {...stack} key={stack.name}>
@@ -30,7 +30,7 @@ export default function StacksPage() {
         ))}
       </ContainerStack>
 
-      <SubTitle clasName="mb-4">Back end</SubTitle>
+      <SubTitle className="mb-4">Back end</SubTitle>
       <ContainerStack>
         {backEnd.map((stack) => (
           <MyStack {...stack} key={stack.name}>
@@ -39,7 +39,7 @@ export default function StacksPage() {
         ))}
       </ContainerStack>
 
-      <SubTitle clasName="mb-4">Ferramentas</SubTitle>
+      <SubTitle className="mb-4">Ferramentas</SubTitle>
       <ContainerStack>
         {tools.map((stack) => (
           <MyStack {...stack} key={stack.name}>
