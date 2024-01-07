@@ -2,28 +2,12 @@ import { StackResponseType, StackType } from "@/types/type-response";
 
 export const Projects = [
   {
-    name: "Imposto de Renda",
-    description:
-      "Aplicação web para conscientizar pessoas sobre o imposto de renda e fazer calculo de Imposto de renda  ",
-    linkPage: "https://spotify-raqf.vercel.app/",
-    linkRepo: "https://github.com/Henrytos/imposto-de-renda",
-    srcImg: "/imgs/projects/imposto-de-renda.png",
-  },
-  {
     name: "Academia Xhealth ",
     description:
       "Aplicação web feita como desafio de um hackaton onde o intuito é fazer um Site de uma academia imaginária  ",
     linkPage: "https://academia-xhealth.vercel.app/",
     linkRepo: "https://github.com/Henrytos/Academia-XHEALTH",
     srcImg: "/imgs/projects/academia-x-health.png",
-  },
-  {
-    name: "Hunger in Afric",
-    description:
-      "Um site desenvolvida com intuito de conceitizar as pessoas sobre a fome na africa",
-    linkPage: "https://hunger-in-africa.vercel.app/",
-    linkRepo: "https://github.com/Henrytos/hungerInAfrica",
-    srcImg: "/imgs/projects/hunger-in-africa.png",
   },
   {
     name: "One bit X",
@@ -33,6 +17,24 @@ export const Projects = [
     linkRepo: "https://github.com/Henrytos/onebitX",
     srcImg: "/imgs/projects/one-bit-x.png",
   },
+
+  {
+    name: "Imposto de Renda",
+    description:
+      "Aplicação web para conscientizar pessoas sobre o imposto de renda e fazer calculo de Imposto de renda  ",
+    linkPage: "https://spotify-raqf.vercel.app/",
+    linkRepo: "https://github.com/Henrytos/imposto-de-renda",
+    srcImg: "/imgs/projects/imposto-de-renda.png",
+  },
+  {
+    name: "Hunger in Afric",
+    description:
+      "Um site desenvolvida com intuito de conceitizar as pessoas sobre a fome na africa",
+    linkPage: "https://hunger-in-africa.vercel.app/",
+    linkRepo: "https://github.com/Henrytos/hungerInAfrica",
+    srcImg: "/imgs/projects/hunger-in-africa.png",
+  },
+
   {
     name: "Calc Js",
     description:
