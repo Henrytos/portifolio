@@ -14,7 +14,7 @@ export function DropDownLink({
   ...props
 }: DropDownLinkProps) {
   const currentPath = usePathname();
-  const href = { ...props };
+  const { href } = { ...props };
   return (
     <DropdownMenuItem
       className={clsx(
