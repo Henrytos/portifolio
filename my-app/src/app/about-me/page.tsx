@@ -63,7 +63,7 @@ export default function AboutMePage() {
           </List>
         </ul>
       </section>
-      <section>
+      <section className="space-y-2">
         <SubTitle isDifferent={true}>Olá, um pouco Sobre min</SubTitle>
         <Text isDifferent={true}>
           Sou Apaixonado pelo mundo da tecnologia e seus beneficios e
@@ -74,7 +74,7 @@ export default function AboutMePage() {
           em me tornar um desenvolvedor Full-Stack.
         </Text>
       </section>
-      <section>
+      <section className="space-y-2">
         <SubTitle isDifferent={true}>Formação acadêmica</SubTitle>
         <Text isDifferent={true}>
           Atualmente estou cursando o 3º ano do ensino médio tecnico em
@@ -84,13 +84,15 @@ export default function AboutMePage() {
         </Text>
       </section>
 
-      <section>
-        <SubTitle isDifferent={true}>Interesses pessoais</SubTitle>
-      </section>
       <section className="space-y-4">
-        <SubTitle isDifferent={true}>Hobbies</SubTitle>
-
-        <article>
+        <div className="space-y-2">
+          <SubTitle isDifferent={true}>Interesses pessoais</SubTitle>
+          <Text isDifferent={true}>
+            Além de tecnologia, tenho outros interesses pessoais, como animes,
+            series, musculução, e jogos.
+          </Text>
+        </div>
+        <article className="space-y-1">
           <SubTitle className="text-xl flex gap-3">
             <span className="flex gap-1">
               <Clapperboard /> Assitir Animes
@@ -149,7 +151,7 @@ export default function AboutMePage() {
             </li>
           </ul>
         </article>
-        <article>
+        <article className="space-y-1">
           <SubTitle className="text-xl flex gap-1">
             <RiNetflixFill /> Assitir series
           </SubTitle>
@@ -164,13 +166,13 @@ export default function AboutMePage() {
             <List>YuYu Hakusho</List>
           </ul>
         </article>
-        <article>
+        <article className="space-y-1">
           <SubTitle className="text-xl flex gap-1">
             <Dumbbell /> Fazer musculução
           </SubTitle>
           <Text isDifferent={true}>
             Gosto muito de fazer musculução ajuda a desetressar a cabeça e corpo
-            alemde trazer benificios para a saude e estetica
+            alem de trazer benificios para a saude e estetica
           </Text>
         </article>
       </section>
