@@ -1,6 +1,7 @@
 "use client";
 import {
   BookOpen,
+  Facebook,
   FolderDot,
   Github,
   Home,
@@ -54,6 +55,12 @@ export function SideBar() {
             icon={Instagram}
           >
             Instagram
+          </NavigationLinkSocial>
+          <NavigationLinkSocial
+            href="https://www.instagram.com/dev_henry16/"
+            icon={Facebook}
+          >
+            Facebook
           </NavigationLinkSocial>
         </nav>
       </aside>

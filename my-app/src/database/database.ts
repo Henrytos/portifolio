@@ -101,9 +101,19 @@ export const Stacks: StackResponseType = {
       srcDocumentation: "https://tailwindcss.com",
     },
     {
+      name: "Shadcn ui",
+      srcImg: "/imgs/stacks/shadcn-ui.png",
+      srcDocumentation: "https://ui.shadcn.com/",
+    },
+    {
       name: "Sass",
       srcImg: "/imgs/stacks/sass.svg",
       srcDocumentation: "https://tailwindcss.com",
+    },
+    {
+      name: "Bootstrap",
+      srcImg: "/imgs/stacks/bootstrap-solid.svg",
+      srcDocumentation: "https://getbootstrap.com/",
     },
     {
       name: "Vite",
@@ -147,6 +157,11 @@ export const Stacks: StackResponseType = {
       srcImg: "/imgs/stacks/prisma.svg",
       srcDocumentation: "https://www.prisma.io/",
     },
+    {
+      name: "Sequeliza",
+      srcImg: "/imgs/stacks/sequelizejs-icon.svg",
+      srcDocumentation: "https://sequelize.org/",
+    },
   ],
   tools: [
     {
@@ -173,6 +188,11 @@ export const Stacks: StackResponseType = {
       name: "Github",
       srcImg: "/imgs/stacks/github.svg",
       srcDocumentation: "https://github.com/",
+    },
+    {
+      name: "Postman",
+      srcImg: "/imgs/stacks/getpostman-icon.svg",
+      srcDocumentation: "https://www.postman.com/",
     },
   ],
 };

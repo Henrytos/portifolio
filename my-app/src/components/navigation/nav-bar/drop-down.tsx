@@ -33,7 +33,7 @@ export function DropDown() {
           home
         </DropDownLink>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem asChild>
           <NavigationTitle>eu</NavigationTitle>
         </DropdownMenuItem>
         <DropDownLink href="/about-me" icon={BookOpen}>

@@ -11,15 +11,18 @@ import {
   Download,
   Eye,
   FolderClosed,
+  Laptop,
 } from "lucide-react";
-import { Projects } from "@/database/database";
+import { Projects, Stacks } from "@/database/database";
 import { ShowProject } from "@/components/card-project/show-project";
 import { Button } from "@/components/ui/button";
+import { MyStack } from "@/components/my-stacks/my-stack";
 
 export default function HomePage() {
   const styleBadge =
     "bg-primary-foreground text-foreground rounded hover:bg-secondary transition-colors";
   const myFavoritesProject = Projects.slice(0, 3);
+  const myFavoritesStacks = Stacks.frontEnd;
   return (
     <Container className="space-y-6">
       <div className="flex  gap-4 h-28 ">
@@ -66,7 +69,7 @@ export default function HomePage() {
             de uma oportunidade de trabalho para que eu possa me desenvolver
             profissionalmente e pessoalmente.
           </Text>
-          <div className="space-x-2">
+          <div className="flex gap-2 flex-wrap">
             <Button asChild className="rounded-[.5rem]">
               <a href="/doc/henry-franz.pdf" download={true}>
                 <span className="antialiased text-sm ">Meu curriculo</span>
@@ -103,7 +106,27 @@ export default function HomePage() {
           />
         ))}
       </Card>
-      <Card></Card>
+      <Card className="w-full rounded-[.5rem]">
+        <CardHeader className="flex flex-row justify-between">
+          <CardTitle className="flex gap-2">
+            <Laptop /> <span>Tecnologias</span>
+          </CardTitle>
+          <Link
+            href="/stacks"
+            className="flex items-center text-xs text-primary hover:text-primary/75 hover:underline transition"
+          >
+            <p>Saber mais</p>
+            <ChevronRight size={15} className="translate-y-px" />
+          </Link>
+        </CardHeader>
+        <CardContent className="flex flex-wrap gap-2">
+          {myFavoritesStacks.map((stack) => (
+            <MyStack {...stack} key={stack.name}>
+              {stack.name}
+            </MyStack>
+          ))}
+        </CardContent>
+      </Card>
     </Container>
   );
 }

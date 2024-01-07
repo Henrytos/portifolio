@@ -24,7 +24,7 @@ export function DropDownLink({
       asChild
     >
       <Link
-        href={href}
+        href={href ?? ""}
         className={clsx(
           " w-full flex gap-2 items-center py-2 px-4 bg-background  group-hover:bg-secondary transition-colors ",
           currentPath == href && "bg-secondary"

@@ -24,7 +24,7 @@ export function ShowProject(props: ShowProjectProps) {
         <DetailsImage name={name} srcImg={srcImg} />
       </Dialog>
       <article className="flex flex-col justify-center gap-1 text-left lg:text-right">
-        <CardTitle className="mb-1.5">{name}</CardTitle>
+        <CardTitle className="mb-1.5 text-lg lg:text-xl">{name}</CardTitle>
         <Text isDifferent={true}>{description}</Text>
         <div className="flex h-auto items-center lg:justify-end gap-2 mt-2">
           <Button asChild className="rounded-[.5rem]">
@@ -44,7 +44,7 @@ export function ShowProject(props: ShowProjectProps) {
   ) : (
     <CardContent className="flex flex-col-reverse lg:flex-row">
       <article className="flex flex-col justify-center  gap-1">
-        <CardTitle className="mb-1.5">{name}</CardTitle>
+        <CardTitle className="mb-1.5 text-lg lg:text-xl">{name}</CardTitle>
         <Text isDifferent={true}>{description}</Text>
         <div className="flex h-auto items-center  gap-2 mt-2">
           <Button asChild className="rounded-[.5rem]">
