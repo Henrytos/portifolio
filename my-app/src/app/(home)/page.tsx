@@ -20,7 +20,7 @@ import { MyStack } from "@/components/my-stacks/my-stack";
 
 export default function HomePage() {
   const styleBadge =
-    "bg-primary-foreground text-foreground rounded hover:bg-secondary transition-colors";
+    "bg-secondary text-foreground rounded hover:bg-primary transition-colors";
   const myFavoritesProject = Projects.slice(0, 3);
   const myFavoritesStacks = Stacks.frontEnd;
   return (

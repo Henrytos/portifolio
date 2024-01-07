@@ -12,8 +12,8 @@ export function Text({ children, isDifferent, clasName }: TextProps) {
     <p
       className={clsx(
         baseStyle,
-        clasName,
-        isDifferent && "text-secondary-foreground dark:text-muted-foreground "
+        isDifferent && "text-secondary-foreground dark:text-muted-foreground ",
+        clasName
       )}
     >
       {children}

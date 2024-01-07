@@ -14,6 +14,7 @@ import { NavigationLinkSocial } from "../navigation-link-social";
 import { NavigationTitle } from "../navigation-title";
 import { MyPersonSmall } from "../my-person-small";
 import { FooterAsideBar } from "./footer-side-bar";
+import { FaWhatsapp } from "react-icons/fa";
 
 export function SideBar() {
   return (
@@ -59,6 +60,12 @@ export function SideBar() {
           <NavigationLinkSocial
             href="https://www.instagram.com/dev_henry16/"
             icon={Facebook}
+          >
+            Facebook
+          </NavigationLinkSocial>
+          <NavigationLinkSocial
+            href="https://www.instagram.com/dev_henry16/"
+            icon={FaWhatsapp}
           >
             Facebook
           </NavigationLinkSocial>

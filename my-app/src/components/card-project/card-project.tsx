@@ -1,10 +1,9 @@
 import { ProjectType } from "@/types/type-response";
 import { Card, CardContent, CardTitle } from "../ui/card";
-import Image from "next/image";
 import { Text } from "../text";
 import { Button } from "../ui/button";
 import { Github } from "lucide-react";
-import { Dialog, DialogTrigger } from "../ui/dialog";
+import { Dialog } from "../ui/dialog";
 import { DetailsImage } from "./details-image";
 import { TriggerImage } from "./trigger-image";
 

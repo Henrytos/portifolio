@@ -1,7 +1,7 @@
 import { Github } from "lucide-react";
 import { Text } from "../text";
 import { Button } from "../ui/button";
-import { CardContent, CardHeader, CardTitle } from "../ui/card";
+import { CardContent, CardTitle } from "../ui/card";
 import { Dialog } from "../ui/dialog";
 import { DetailsImage } from "./details-image";
 import { TriggerImage } from "./trigger-image";
