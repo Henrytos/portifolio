@@ -36,7 +36,9 @@ export default function HomePage() {
         <div className="pt-2 flex flex-col justify-between ">
           <div>
             <Title>Henry Franz</Title>
-            <Text isDifferent={true}>Desenvolvedor Front-End</Text>
+            <Text isDifferent={true} data-aos="fade-up" clasName="transitions">
+              Desenvolvedor Front-End
+            </Text>
           </div>
           <div className="space-x-1.5">
             <Badge className={styleBadge}>NextJs</Badge>
