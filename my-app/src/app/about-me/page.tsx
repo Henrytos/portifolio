@@ -2,34 +2,17 @@ import { Metadata } from "next";
 import { Container } from "@/components/container";
 import { Title } from "@/components/title";
 import { Text } from "@/components/text";
-import { ReactNode, useRef } from "react";
 import { SubTitle } from "@/components/sub-title";
 import { BookOpenText, Clapperboard, Dumbbell } from "lucide-react";
 import { RiNetflixFill } from "react-icons/ri";
 import Image from "next/image";
-import clsx from "clsx";
+import { List } from "@/components/listx";
 
 export const metadata: Metadata = {
   title: "Sobre min",
   description: "página sobre min",
 };
 
-export function List({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
-  return (
-    <span className="flex items-center gap-3">
-      <span className="w-1 h-1 translate-y-px rounded block bg-muted-foreground" />
-      <div className={clsx("flex items-center gap-2", className)}>
-        {children}
-      </div>
-    </span>
-  );
-}
 export default function AboutMePage() {
   return (
     <Container className="space-y-4">
