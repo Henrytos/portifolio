@@ -5,8 +5,7 @@ import { Text } from "@/components/text";
 import { SubTitle } from "@/components/sub-title";
 import { BookOpenText, Clapperboard, Dumbbell } from "lucide-react";
 import { RiNetflixFill } from "react-icons/ri";
-import Image from "next/image";
-import { List } from "@/components/listx";
+import { AnimeList, List, SerieList } from "@/components/about-me";
 
 export const metadata: Metadata = {
   title: "Sobre min",
@@ -46,6 +45,7 @@ export default function AboutMePage() {
           </List>
         </ul>
       </section>
+
       <section className="space-y-2">
         <SubTitle isDifferent={true}>Olá, um pouco Sobre min</SubTitle>
         <Text isDifferent={true}>
@@ -57,6 +57,7 @@ export default function AboutMePage() {
           em me tornar um desenvolvedor Full-Stack.
         </Text>
       </section>
+
       <section className="space-y-2">
         <SubTitle isDifferent={true}>Formação acadêmica</SubTitle>
         <Text isDifferent={true}>
@@ -91,48 +92,7 @@ export default function AboutMePage() {
             assistindo ou lendo algum.
           </Text>
           <Text isDifferent={true}>Meus favoritos são:</Text>
-          <ul
-            className=" space-y-1 grid  
-          grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-5"
-          >
-            <li className="space-y-2">
-              <List>
-                <span className="font-bold antialiased">SouSou no frieren</span>
-              </List>
-              <Image
-                src="/imgs/about-me/snf.jpeg"
-                width={400}
-                height={400}
-                className="w-full  object-cover"
-                alt="SouSou no frieren"
-              />
-            </li>
-            <li className="space-y-2">
-              <List>
-                <span className="font-bold antialiased">Jujustsu kaisen</span>
-              </List>
-              <Image
-                src="/imgs/about-me/jk.jpeg"
-                width={400}
-                height={400}
-                className="w-full  object-cover"
-                alt="Jujustsu kaisen"
-              />
-            </li>
-
-            <li className="space-y-2">
-              <List>
-                <span className="font-bold antialiased">Blue lock</span>
-              </List>
-              <Image
-                src="/imgs/about-me/bl.jpeg"
-                width={400}
-                height={400}
-                className="w-full  object-cover"
-                alt="Blue lock"
-              />
-            </li>
-          </ul>
+          <AnimeList />
         </article>
         <article className="space-y-1">
           <SubTitle className="text-xl flex gap-1">
@@ -143,11 +103,7 @@ export default function AboutMePage() {
             netflix HBO-Max
           </Text>
           <Text isDifferent={true}>Meus favoritos são:</Text>
-          <ul className=" space-y-1">
-            <List>The Big Bang theory </List>
-            <List>Supernatural</List>
-            <List>YuYu Hakusho</List>
-          </ul>
+          <SerieList />
         </article>
         <article className="space-y-1">
           <SubTitle className="text-xl flex gap-1">
