@@ -27,7 +27,7 @@ export default function ProjectsPage() {
           Git Hub <Github size={18} className="inline -translate-y-0.5" />
         </a>{" "}
       </Text>
-      <SubTitle clasName="mb-4">Front-end</SubTitle>
+      <SubTitle className="mb-4">Front-end</SubTitle>
       <CardConatiner>
         {Projects?.map((project) => (
           <CardProject {...project} key={project.name} />
