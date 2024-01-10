@@ -3,9 +3,10 @@ import { Container } from "@/components/container";
 import { Title } from "@/components/title";
 import { Text } from "@/components/text";
 import { SubTitle } from "@/components/sub-title";
-import { Stacks } from "@/database/database";
 import { MyStack } from "@/components/my-stacks/my-stack";
 import { ContainerStack } from "@/components/my-stacks/containe-stack";
+import { StackResponseType, StackType } from "@/types/type-response";
+import { fetchStacks } from "@/services/fetchs";
 
 export const metadata: Metadata = {
   title: "Habilidades",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function StacksPage() {
-  const { frontEnd, backEnd, tools } = Stacks;
+  const { backEnd, frontEnd, tools } = await fetchStacks();
   return (
     <Container>
       <Title className="mb-2">Tecnologias e Ferramentas</Title>

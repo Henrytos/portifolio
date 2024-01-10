@@ -7,6 +7,7 @@ import { SubTitle } from "@/components/sub-title";
 import { CardProject } from "@/components/card-project/card-project";
 import { CardConatiner } from "@/components/card-project/card-conatiner";
 import { ProjectType } from "@/types/type-response";
+import { fetchProjects } from "@/services/fetchs";
 
 export const metadata: Metadata = {
   title: "Projetos",
@@ -14,11 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ProjectsPage() {
-  const data = await fetch(
-    "https://portifolio-alpha-ebon.vercel.app/api/projects"
-  );
-  const Projects: ProjectType[] = await data.json();
-
+  const Projects = await fetchProjects();
   return (
     <Container>
       <Title className="mb-2">Meus Projetos</Title>
