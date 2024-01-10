@@ -1,4 +1,4 @@
-import { StackResponseType, StackType } from "@/types/type-response";
+import { StackResponseType } from "@/types/type-response";
 
 export const Projects = [
   {
