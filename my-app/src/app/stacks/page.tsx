@@ -12,8 +12,11 @@ export const metadata: Metadata = {
   description: "Minhas habilidade e tecnologias",
 };
 
-export default function StacksPage() {
+export default async function StacksPage() {
   const { frontEnd, backEnd, tools } = Stacks;
+  const data = await fetch("http://localhost:3000/api/stacks");
+  const res = await data.json();
+  console.log(res);
   return (
     <Container>
       <Title className="mb-2">Tecnologias e Ferramentas</Title>
