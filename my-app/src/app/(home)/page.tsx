@@ -13,16 +13,17 @@ import {
   FolderClosed,
   Laptop,
 } from "lucide-react";
-import { Projects, Stacks } from "@/database/database";
 import { ShowProject } from "@/components/card-project/show-project";
 import { Button } from "@/components/ui/button";
 import { MyStack } from "@/components/my-stacks/my-stack";
+import { fetchProjects, fetchStacks } from "@/services/fetchs";
 
-export default function HomePage() {
+export default async function HomePage() {
   const styleBadge =
     "bg-secondary text-foreground rounded hover:bg-primary transition-colors";
-  const myFavoritesProject = Projects.slice(0, 3);
-  const myFavoritesStacks = Stacks.frontEnd;
+  const projects = await fetchProjects();
+  const myFavoritesProject = projects.slice(0, 3);
+  const { frontEnd: myFavoritesStacks } = await fetchStacks();
   return (
     <Container className="space-y-6">
       <div className="flex  gap-4 h-28 ">

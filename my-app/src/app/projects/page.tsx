@@ -6,7 +6,6 @@ import { Github } from "lucide-react";
 import { SubTitle } from "@/components/sub-title";
 import { CardProject } from "@/components/card-project/card-project";
 import { CardConatiner } from "@/components/card-project/card-conatiner";
-import { ProjectType } from "@/types/type-response";
 import { fetchProjects } from "@/services/fetchs";
 
 export const metadata: Metadata = {
