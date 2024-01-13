@@ -21,9 +21,11 @@ import { fetchProjects, fetchStacks } from "@/services/fetchs";
 export default async function HomePage() {
   const styleBadge =
     "bg-secondary text-foreground rounded hover:bg-primary transition-colors";
+
   const projects = await fetchProjects();
   const myFavoritesProject = projects.slice(0, 3);
   const { frontEnd: myFavoritesStacks } = await fetchStacks();
+
   return (
     <Container className="space-y-6">
       <div className="flex  gap-4 h-28 ">

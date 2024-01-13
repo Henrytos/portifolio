@@ -1,18 +1,15 @@
-import { ProjectType, StackResponseType } from "@/types/type-response";
+import { StackResponseType } from "@/types/type-response";
+import { PrismaClient, projects } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export async function fetchStacks(): Promise<StackResponseType> {
-  const data = await fetch(
-    "https://portifolio-alpha-ebon.vercel.app/api/stacks"
-  );
-  const res = await data.json();
-
-  return res[0] as StackResponseType;
+  const data = await prisma.stacks.findMany();
+  const stacks = { ...data[0] };
+  return stacks;
 }
 
-export async function fetchProjects(): Promise<ProjectType[]> {
-  const data = await fetch(
-    "https://portifolio-alpha-ebon.vercel.app/api/projects"
-  );
-  const Projects: ProjectType[] = await data.json();
-  return Projects;
+export async function fetchProjects(): Promise<projects[]> {
+  const projects = await prisma.projects.findMany();
+  return projects;
 }

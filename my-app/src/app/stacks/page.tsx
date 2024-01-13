@@ -5,7 +5,6 @@ import { Text } from "@/components/text";
 import { SubTitle } from "@/components/sub-title";
 import { MyStack } from "@/components/my-stacks/my-stack";
 import { ContainerStack } from "@/components/my-stacks/containe-stack";
-import { StackResponseType, StackType } from "@/types/type-response";
 import { fetchStacks } from "@/services/fetchs";
 
 export const metadata: Metadata = {
