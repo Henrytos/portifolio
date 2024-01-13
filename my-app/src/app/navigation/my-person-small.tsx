@@ -39,6 +39,6 @@ export function MyPersonSmall() {
       </div>
     </>
   ) : (
-    <div className=""></div>
+    <div />
   );
 }
