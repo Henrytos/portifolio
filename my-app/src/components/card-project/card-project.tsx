@@ -7,8 +7,9 @@ import { Dialog } from "../ui/dialog";
 import { DetailsImage } from "./details-image";
 import { TriggerImage } from "./trigger-image";
 
-export function CardProject(project: ProjectType) {
+export async function CardProject(project: ProjectType) {
   const { name, description, linkPage, linkRepo, srcImg } = project;
+
   return (
     <Card className="group w-full lg:max-w-96  pt-4 rounded-xl">
       <CardContent>

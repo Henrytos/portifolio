@@ -5,7 +5,7 @@ import { Text } from "@/components/text";
 import { SubTitle } from "@/components/sub-title";
 import { BookOpenText, Clapperboard, Dumbbell } from "lucide-react";
 import { RiNetflixFill } from "react-icons/ri";
-import { AnimeList, List, SerieList } from "@/components/about-me";
+import { AnimeList, List, SerieList } from "@/app/about-me/components/about-me";
 
 export const metadata: Metadata = {
   title: "Sobre min",

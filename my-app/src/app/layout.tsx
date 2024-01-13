@@ -2,8 +2,8 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/contexts/theme/theme-provider";
-import { NavBar } from "@/components/navigation/nav-bar/nav-bar";
-import { SideBar } from "@/components/navigation/side-bar/side-bar";
+import { NavBar } from "@/app/navigation/nav-bar/nav-bar";
+import { SideBar } from "@/app/navigation/side-bar/side-bar";
 import { Metadata } from "next";
 
 export const fontSans = FontSans({

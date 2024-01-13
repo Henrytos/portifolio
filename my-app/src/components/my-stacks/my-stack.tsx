@@ -9,6 +9,7 @@ interface MyStackProps extends StackType {
 
 export function MyStack(stack: MyStackProps) {
   const { srcDocumentation, srcImg, children } = stack;
+
   return (
     <a
       href={srcDocumentation}

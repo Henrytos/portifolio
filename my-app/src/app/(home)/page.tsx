@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Container } from "@/components/container";
 import { Text } from "@/components/text";
 import Image from "next/image";
 import { Title } from "@/components/title";
@@ -11,12 +10,11 @@ import {
   Download,
   Eye,
   FolderClosed,
-  Laptop,
 } from "lucide-react";
 import { ShowProject } from "@/components/card-project/show-project";
 import { Button } from "@/components/ui/button";
-import { MyStack } from "@/components/my-stacks/my-stack";
-import { fetchProjects, fetchStacks } from "@/services/fetchs";
+import { fetchProjects } from "@/services/fetchs";
+import { Container } from "@/components/container";
 
 export default async function HomePage() {
   const styleBadge =
@@ -24,7 +22,6 @@ export default async function HomePage() {
 
   const projects = await fetchProjects();
   const myFavoritesProject = projects.slice(0, 3);
-  const { frontEnd: myFavoritesStacks } = await fetchStacks();
 
   return (
     <Container className="space-y-6">
@@ -110,27 +107,6 @@ export default async function HomePage() {
             isDifferent={+i % 2 != 0}
           />
         ))}
-      </Card>
-      <Card className="w-full rounded-[.5rem]">
-        <CardHeader className="flex flex-row justify-between">
-          <CardTitle className="flex gap-2">
-            <Laptop /> <span>Tecnologias</span>
-          </CardTitle>
-          <Link
-            href="/stacks"
-            className="flex items-center text-xs text-primary hover:text-primary/75 hover:underline transition"
-          >
-            <p>Saber mais</p>
-            <ChevronRight size={15} className="translate-y-px" />
-          </Link>
-        </CardHeader>
-        <CardContent className="flex flex-wrap gap-2">
-          {myFavoritesStacks.map((stack) => (
-            <MyStack {...stack} key={stack.name}>
-              {stack.name}
-            </MyStack>
-          ))}
-        </CardContent>
       </Card>
     </Container>
   );
