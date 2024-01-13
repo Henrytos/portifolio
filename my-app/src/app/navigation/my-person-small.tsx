@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export function MyPersonSmall() {
   const currentPath = usePathname();
   return currentPath != "/" ? (
-    <>
+    <Link href="/">
       <div className="hidden lg:block pl-4 pb-4 mb-4 border-b">
         <div className="flex gap-2">
           <Image
@@ -38,7 +39,7 @@ export function MyPersonSmall() {
           </p>
         </div>
       </div>
-    </>
+    </Link>
   ) : (
     <div className=""></div>
   );
