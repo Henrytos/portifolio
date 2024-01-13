@@ -45,7 +45,6 @@ export default function AboutMePage() {
           </List>
         </ul>
       </section>
-
       <section className="space-y-2">
         <SubTitle isDifferent={true}>Olá, um pouco Sobre min</SubTitle>
         <Text isDifferent={true}>
@@ -57,7 +56,6 @@ export default function AboutMePage() {
           em me tornar um desenvolvedor Full-Stack.
         </Text>
       </section>
-
       <section className="space-y-2">
         <SubTitle isDifferent={true}>Formação acadêmica</SubTitle>
         <Text isDifferent={true}>
@@ -67,7 +65,6 @@ export default function AboutMePage() {
           pessoalmente.
         </Text>
       </section>
-
       <section className="space-y-4">
         <div className="space-y-2">
           <SubTitle isDifferent={true}>Interesses pessoais</SubTitle>

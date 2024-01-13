@@ -4,24 +4,17 @@ import Image from "next/image";
 import { Title } from "@/components/title";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import {
-  ChevronRight,
-  ClipboardList,
-  Download,
-  Eye,
-  FolderClosed,
-} from "lucide-react";
-import { ShowProject } from "@/components/card-project/show-project";
+import { ChevronRight, ClipboardList, Download, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { fetchProjects } from "@/services/fetchs";
 import { Container } from "@/components/container";
+import { CardProjectHome } from "@/components/cards-home/card-project-home";
+import { CardStackHome } from "@/components/cards-home/card-stack-home";
+import { Suspense } from "react";
+import { CardSkeleton } from "@/components/card-project/card-skeleton";
 
-export default async function HomePage() {
+export default function HomePage() {
   const styleBadge =
     "bg-secondary text-foreground rounded hover:bg-primary transition-colors";
-
-  const projects = await fetchProjects();
-  const myFavoritesProject = projects.slice(0, 3);
 
   return (
     <Container className="space-y-6">
@@ -50,7 +43,6 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
-
       <Card className="w-full rounded-[.5rem]">
         <CardHeader className="flex flex-row justify-between">
           <CardTitle className="flex gap-2">
@@ -87,27 +79,12 @@ export default async function HomePage() {
           </div>
         </CardContent>
       </Card>
-      <Card className="w-full rounded-[.5rem]">
-        <CardHeader className="flex flex-row justify-between">
-          <CardTitle className="flex gap-2">
-            <FolderClosed /> <span>Projetos</span>
-          </CardTitle>
-          <Link
-            href="/projects"
-            className="flex items-center text-xs text-primary hover:text-primary/75 hover:underline transition"
-          >
-            <p>Saber mais</p>
-            <ChevronRight size={15} className="translate-y-px" />
-          </Link>
-        </CardHeader>
-        {myFavoritesProject.map((project, i) => (
-          <ShowProject
-            {...project}
-            key={project.linkRepo}
-            isDifferent={+i % 2 != 0}
-          />
-        ))}
-      </Card>
+      <Suspense fallback={<CardSkeleton />}>
+        <CardProjectHome />
+      </Suspense>
+      <Suspense fallback={<CardSkeleton />}>
+        <CardStackHome />
+      </Suspense>
     </Container>
   );
 }
