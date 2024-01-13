@@ -5,7 +5,8 @@ import { Text } from "@/components/text";
 import { SubTitle } from "@/components/sub-title";
 import { BookOpenText, Clapperboard, Dumbbell } from "lucide-react";
 import { RiNetflixFill } from "react-icons/ri";
-import { AnimeList, List, SerieList } from "@/app/about-me/components/about-me";
+import { ListItem } from "./list-item";
+import { AnimesFavoites, SeriesFavorites } from "./favortites-list";
 
 export const metadata: Metadata = {
   title: "Sobre min",
@@ -18,31 +19,31 @@ export default function AboutMePage() {
       <section className="space-y-2">
         <Title>Sobre min </Title>
         <ul className=" space-y-1">
-          <List>
+          <ListItem>
             <span className="font-bold antialiased">Localização: </span>
             <Text isDifferent={true}>São Palo, Brasil</Text>
-          </List>
-          <List>
+          </ListItem>
+          <ListItem>
             <span className="font-bold antialiased">Idade: </span>
             <Text isDifferent={true}>17</Text>
-          </List>
-          <List>
+          </ListItem>
+          <ListItem>
             <span className="font-bold antialiased">Sexo: </span>
             <Text isDifferent={true}>Henry Frnaz</Text>
-          </List>
-          <List>
+          </ListItem>
+          <ListItem>
             <span className="font-bold antialiased">Idiomas: </span>
             <Text isDifferent={true}>
               Portugues, Espanhol <span className="text-xs">(basíco)</span>{" "}
             </Text>
-          </List>
-          <List>
+          </ListItem>
+          <ListItem>
             <span className="font-bold antialiased">Stacks: </span>
             <Text isDifferent={true}>
               NextJs , TailwindCss ,React , TypeScript , NodeJs , Express ,
               JavaScript , Css , Html
             </Text>
-          </List>
+          </ListItem>
         </ul>
       </section>
       <section className="space-y-2">
@@ -89,7 +90,7 @@ export default function AboutMePage() {
             assistindo ou lendo algum.
           </Text>
           <Text isDifferent={true}>Meus favoritos são:</Text>
-          <AnimeList />
+          <AnimesFavoites />
         </article>
         <article className="space-y-1">
           <SubTitle className="text-xl flex gap-1">
@@ -100,7 +101,7 @@ export default function AboutMePage() {
             netflix HBO-Max
           </Text>
           <Text isDifferent={true}>Meus favoritos são:</Text>
-          <SerieList />
+          <SeriesFavorites />
         </article>
         <article className="space-y-1">
           <SubTitle className="text-xl flex gap-1">
