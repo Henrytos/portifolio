@@ -1,5 +1,5 @@
-import { StackResponseType } from "@/types/type-response";
-import { PrismaClient, projects } from "@prisma/client";
+import { ProjectType, StackResponseType } from "@/types/type-response";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -9,7 +9,7 @@ export async function fetchStacks(): Promise<StackResponseType> {
   return stacks;
 }
 
-export async function fetchProjects(): Promise<projects[]> {
+export async function fetchProjects(): Promise<ProjectType[]> {
   const projects = await prisma.projects.findMany();
   return projects;
 }

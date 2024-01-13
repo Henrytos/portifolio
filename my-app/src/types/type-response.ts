@@ -11,6 +11,7 @@ export interface StackResponseType {
 }
 
 export interface ProjectType {
+  id: string;
   name: string;
   description: string;
   srcImg: string;
