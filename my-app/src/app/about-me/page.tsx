@@ -21,7 +21,7 @@ export default function AboutMePage() {
         <ul className=" space-y-1">
           <ListItem>
             <span className="font-bold antialiased">Localização: </span>
-            <Text isDifferent={true}>São Palo, Brasil</Text>
+            <Text isDifferent={true}>São Paulo, Brasil</Text>
           </ListItem>
           <ListItem>
             <span className="font-bold antialiased">Idade: </span>
@@ -29,7 +29,7 @@ export default function AboutMePage() {
           </ListItem>
           <ListItem>
             <span className="font-bold antialiased">Sexo: </span>
-            <Text isDifferent={true}>Henry Frnaz</Text>
+            <Text isDifferent={true}>Masculino</Text>
           </ListItem>
           <ListItem>
             <span className="font-bold antialiased">Idiomas: </span>
@@ -47,31 +47,30 @@ export default function AboutMePage() {
         </ul>
       </section>
       <section className="space-y-2">
-        <SubTitle isDifferent={true}>Olá, um pouco Sobre min</SubTitle>
+        <SubTitle isDifferent={true}>Olá, um pouco sobre mim:</SubTitle>
         <Text isDifferent={true}>
-          Sou Apaixonado pelo mundo da tecnologia e seus beneficios e
-          facilidades que podem proporcionar para a vida das pessoas ,sempre
-          buscando aprender coisas novas. Sou autodidata, e estou sempre
-          buscando aprender coisas novas, e aprimorar meus conhecimentos.
-          Atualmente estou estudando sobre desenvolvimento web, e estou focado
-          em me tornar um desenvolvedor Full-Stack.
+          Sou apaixonado pelo mundo da tecnologia e pelos benefícios e
+          facilidades que ela pode proporcionar na vida das pessoas, sempre
+          buscando aprender coisas novas. Sou autodidata e estou constantemente
+          aprimorando meus conhecimentos. Atualmente, estou focado em estudar
+          desenvolvimento web, com o objetivo de me tornar um desenvolvedor
+          Full-Stack.
         </Text>
       </section>
       <section className="space-y-2">
-        <SubTitle isDifferent={true}>Formação acadêmica</SubTitle>
+        <SubTitle isDifferent={true}>Formação acadêmica:</SubTitle>
         <Text isDifferent={true}>
-          Atualmente estou cursando o 3º ano do ensino médio tecnico em
-          desenvolviemento de sistemas e estou em busca de uma oportunidade de
-          trabalho para que eu possa me desenvolver profissionalmente e
-          pessoalmente.
+          Atualmente, estou cursando o 3º ano do ensino médio técnico em
+          desenvolvimento de sistemas e estou em busca de oportunidades de
+          trabalho para desenvolver-me profissionalmente e pessoalmente.
         </Text>
       </section>
       <section className="space-y-4">
         <div className="space-y-2">
           <SubTitle isDifferent={true}>Interesses pessoais</SubTitle>
           <Text isDifferent={true}>
-            Além de tecnologia, tenho outros interesses pessoais, como animes,
-            series, musculução, e jogos.
+            Além da tecnologia, tenho outros interesses pessoais, como animes,
+            séries, musculação e jogos.
           </Text>
         </div>
         <article className="space-y-1">
