@@ -1,10 +1,6 @@
 import { Metadata } from "next";
 import { Title } from "@/_components/title";
 import { Text } from "@/_components/text";
-import { SubTitle } from "@/_components/sub-title";
-import { MyStack } from "@/_components/my-stacks/my-stack";
-import { ContainerStack } from "@/_components/my-stacks/containe-stack";
-import { fetchStacks } from "@/_services/fetchs";
 import { Container } from "@/_components/container";
 import { MyStackList } from "@/_components/my-stacks/my-stack-list";
 import { Suspense } from "react";

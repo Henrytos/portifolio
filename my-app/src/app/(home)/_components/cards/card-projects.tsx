@@ -1,11 +1,11 @@
-import { ChevronRight, FolderClosed } from "lucide-react";
-import { Card, CardHeader, CardTitle } from "../ui/card";
-import Link from "next/link";
+import { FolderClosed } from "lucide-react";
 import { fetchProjects } from "@/_services/fetchs";
-import { ShowProject } from "../card-project/show-project";
 import { ProjectType } from "@/_types/type-response";
+import { Card, CardHeader, CardTitle } from "@/_components/ui/card";
+import { ShowProject } from "@/_components/card-project/show-project";
+import { CardLink } from "./card-link";
 
-export async function CardProjectHome() {
+export async function CardProjects() {
   const projects = await fetchProjects();
   const myFavoritesProject: ProjectType[] = [];
   projects.filter((project) => {
@@ -25,13 +25,7 @@ export async function CardProjectHome() {
         <CardTitle className="flex gap-2">
           <FolderClosed /> <span>Projetos</span>
         </CardTitle>
-        <Link
-          href="/projects"
-          className="flex items-center text-xs text-primary hover:text-primary/75 hover:underline transition"
-        >
-          <p>Saber mais</p>
-          <ChevronRight size={15} className="translate-y-px" />
-        </Link>
+        <CardLink href="/projects">Saber mais</CardLink>
       </CardHeader>
       {myFavoritesProject.map((project, i) => (
         <ShowProject
