@@ -1,16 +1,21 @@
-import { Badge } from "@/components/ui/badge";
-import { Text } from "@/components/text";
+import { Badge } from "@/_components/ui/badge";
+import { Text } from "@/_components/text";
 import Image from "next/image";
-import { Title } from "@/components/title";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Title } from "@/_components/title";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/_components/ui/card";
 import Link from "next/link";
 import { ChevronRight, ClipboardList, Download, Eye } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Container } from "@/components/container";
-import { CardProjectHome } from "@/components/cards-home/card-project-home";
-import { CardStackHome } from "@/components/cards-home/card-stack-home";
+import { Button } from "@/_components/ui/button";
+import { Container } from "@/_components/container";
+import { CardProjectHome } from "@/_components/cards-home/card-project-home";
+import { CardStackHome } from "@/_components/cards-home/card-stack-home";
 import { Suspense } from "react";
-import { CardSkeleton } from "@/components/card-project/card-skeleton";
+import { CardSkeleton } from "@/_components/card-project/card-skeleton";
 
 export default function HomePage() {
   const styleBadge =

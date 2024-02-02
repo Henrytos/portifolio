@@ -1,14 +1,14 @@
 import { Metadata } from "next";
-import { Title } from "@/components/title";
-import { Text } from "@/components/text";
-import { SubTitle } from "@/components/sub-title";
-import { MyStack } from "@/components/my-stacks/my-stack";
-import { ContainerStack } from "@/components/my-stacks/containe-stack";
-import { fetchStacks } from "@/services/fetchs";
-import { Container } from "@/components/container";
-import { MyStackList } from "@/components/my-stacks/my-stack-list";
+import { Title } from "@/_components/title";
+import { Text } from "@/_components/text";
+import { SubTitle } from "@/_components/sub-title";
+import { MyStack } from "@/_components/my-stacks/my-stack";
+import { ContainerStack } from "@/_components/my-stacks/containe-stack";
+import { fetchStacks } from "@/_services/fetchs";
+import { Container } from "@/_components/container";
+import { MyStackList } from "@/_components/my-stacks/my-stack-list";
 import { Suspense } from "react";
-import { StacksSkeleton } from "@/components/my-stacks/stacks-skeleton";
+import { StacksSkeleton } from "@/_components/my-stacks/stacks-skeleton";
 
 export const metadata: Metadata = {
   title: "Habilidades",

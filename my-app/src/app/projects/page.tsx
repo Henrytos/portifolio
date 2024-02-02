@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import { Title } from "@/components/title";
-import { Text } from "@/components/text";
+import { Title } from "@/_components/title";
+import { Text } from "@/_components/text";
 import { Github } from "lucide-react";
-import { SubTitle } from "@/components/sub-title";
-import { CardConatiner } from "@/components/card-project/card-conatiner";
-import { Container } from "@/components/container";
-import { CardProjectList } from "@/components/card-project/card-list";
+import { SubTitle } from "@/_components/sub-title";
+import { CardConatiner } from "@/_components/card-project/card-conatiner";
+import { Container } from "@/_components/container";
+import { CardProjectList } from "@/_components/card-project/card-list";
 
 export const metadata: Metadata = {
   title: "Projetos",

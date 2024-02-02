@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import { Container } from "@/components/container";
-import { Title } from "@/components/title";
-import { Text } from "@/components/text";
-import { SubTitle } from "@/components/sub-title";
+import { Container } from "@/_components/container";
+import { Title } from "@/_components/title";
+import { Text } from "@/_components/text";
+import { SubTitle } from "@/_components/sub-title";
 import { BookOpenText, Clapperboard, Dumbbell } from "lucide-react";
 import { RiNetflixFill } from "react-icons/ri";
 import { ListItem } from "./list-item";
