@@ -5,6 +5,7 @@ import { CardSkeleton } from "./card-skeleton";
 
 export async function CardProjectList() {
   const Projects = await fetchProjects();
+
   return (
     <>
       {Projects.map((project) => (

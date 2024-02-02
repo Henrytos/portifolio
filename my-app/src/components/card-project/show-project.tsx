@@ -14,12 +14,12 @@ interface ShowProjectProps extends ProjectType {
 export function ShowProject(props: ShowProjectProps) {
   const { name, description, linkPage, linkRepo, srcImg, isDifferent } = props;
   return isDifferent ? (
-    <CardContent className="flex flex-col lg:flex-row">
+    <CardContent className="flex flex-col  lg:flex-row lg:justify-between">
       <Dialog>
         <TriggerImage
           name={name}
           srcImg={srcImg}
-          className="h-56 w-96  m-auto lg:m-0"
+          className="h-56 w-96   lg:m-0  max-w-sm"
         />
         <DetailsImage name={name} srcImg={srcImg} />
       </Dialog>
@@ -42,8 +42,8 @@ export function ShowProject(props: ShowProjectProps) {
       </article>
     </CardContent>
   ) : (
-    <CardContent className="flex flex-col-reverse lg:flex-row">
-      <article className="flex flex-col justify-center  gap-1">
+    <CardContent className="flex flex-col-reverse lg:justify-between lg:flex-row">
+      <article className="flex flex-col justify-center  gap-1 w-full">
         <CardTitle className="mb-1.5 text-lg lg:text-xl">{name}</CardTitle>
         <Text isDifferent={true}>{description}</Text>
         <div className="flex h-auto items-center  gap-2 mt-2">
@@ -64,7 +64,7 @@ export function ShowProject(props: ShowProjectProps) {
         <TriggerImage
           name={name}
           srcImg={srcImg}
-          className="h-56 w-96 m-auto"
+          className="h-56 w-full max-w-sm"
         />
         <DetailsImage name={name} srcImg={srcImg} />
       </Dialog>

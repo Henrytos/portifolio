@@ -3,10 +3,21 @@ import { Card, CardHeader, CardTitle } from "../ui/card";
 import Link from "next/link";
 import { fetchProjects } from "@/services/fetchs";
 import { ShowProject } from "../card-project/show-project";
+import { ProjectType } from "@/types/type-response";
 
 export async function CardProjectHome() {
   const projects = await fetchProjects();
-  const myFavoritesProject = projects.slice(0, 3);
+  const myFavoritesProject: ProjectType[] = [];
+  projects.filter((project) => {
+    if (
+      project.name === "Academia Xhealth" ||
+      project.name == "One bit X" ||
+      project.name === "Next Anime"
+    ) {
+      myFavoritesProject.push(project);
+      return project;
+    }
+  });
 
   return (
     <Card className="w-full rounded-[.5rem]">
