@@ -20,8 +20,8 @@ export function MyStack(stack: MyStackProps) {
     >
       <div className="shrink bg-primary/5  dark:bg-secondary/70 p-2 rounded border-primary-foreground dark:group-hover:bg-primary/15 group-hover:bg-primary/30  transition-colors">
         <Image
-          width={200}
-          height={300}
+          width={50}
+          height={50}
           alt={children?.toString() ?? ""}
           className="h-8 w-8"
           src={srcImg ?? ""}
