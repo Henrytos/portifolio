@@ -8,9 +8,8 @@ Este é o meu portfólio pessoal, onde compartilho projetos, habilidades e infor
 
 ## Capturas de Tela
 
-!Captura de Tela 1
-!Captura de Tela 2
-
+<img src="https://utfs.io/f/fa64940a-a6a5-4f36-928e-3d352096f067-4kdcbs.png">
+<img src="https://utfs.io/f/3866186a-8163-42d1-9b88-60902af534b1-4kdcz1.png">
 ## Tecnologias Utilizadas
 
 - HTML
