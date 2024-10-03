@@ -8,13 +8,10 @@ interface MyStackProps extends StackType {
 }
 
 export function MyStack(stack: MyStackProps) {
-  const { srcDocumentation, srcImg, children } = stack;
+  const {  srcImg, children } = stack;
 
   return (
-    <a
-      href={srcDocumentation}
-      target="_blank"
-      key={srcImg}
+    <span
       className="group backdrop-blur-3xl flex items-center gap-3 h-16 
             bg-secondary dark:bg-secondary/50 hover:bg-primary/15 hover:dark:bg-secondary  p-3 rounded-[.5rem] transition-all"
     >
@@ -29,6 +26,6 @@ export function MyStack(stack: MyStackProps) {
       </div>
 
       <Text clasName="text-xs sm:text-sm">{children}</Text>
-    </a>
+    </span>
   );
 }
