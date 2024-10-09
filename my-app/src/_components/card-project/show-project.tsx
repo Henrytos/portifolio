@@ -25,12 +25,12 @@ export function ShowProject(props: any) {
         <div className="flex h-auto items-center lg:justify-end gap-2 mt-2">
           <Button asChild className="rounded-[.5rem]">
             <a href={linkPage} target="_blank">
-              <Link size={20} /> <span className="ml-2">Visitar</span>
+              <span className="ml-2">Visitar</span>
             </a>
           </Button>
           <Button asChild variant={"outline"} className="rounded-[.5rem]">
             <a href={linkRepo} target="_blank">
-              {" "}
+
               <Github size={20} /> <span className="ml-2">Código fonte</span>
             </a>
           </Button>
@@ -45,12 +45,12 @@ export function ShowProject(props: any) {
         <div className="flex h-auto items-center  gap-2 mt-2">
           <Button asChild className="rounded-[.5rem]">
             <a href={linkPage} target="_blank" >
-              <Link size={20} /> <span className="ml-2">Visitar</span>
+              <span className="ml-2">Visitar</span>
             </a>
           </Button>
           <Button asChild variant={"outline"} className="rounded-[.5rem]">
             <a href={linkRepo} target="_blank">
-              {" "}
+
               <Github size={20} /> <span className="ml-2">Código fonte</span>
             </a>
           </Button>

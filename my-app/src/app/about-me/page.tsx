@@ -34,7 +34,7 @@ export default function AboutMePage() {
           <ListItem>
             <span className="font-bold antialiased">Idiomas: </span>
             <Text isDifferent={true}>
-              Portugues, Espanhol <span className="text-xs">(basíco)</span>{" "}
+              Portugues, Espanhol <span className="text-xs">(basíco)</span>
             </Text>
           </ListItem>
           <ListItem>

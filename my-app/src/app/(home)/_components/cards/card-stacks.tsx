@@ -8,9 +8,14 @@ import { ContainerStack } from "@/_components/my-stacks/containe-stack";
 import { MyStack } from "@/_components/my-stacks/my-stack";
 import { CardLink } from "./card-link";
 import { Laptop } from "lucide-react";
-import { stacksFontEnd } from "@/_database/stacks";
+import { GetStacksApiResponse } from "@/app/stacks/page";
 
-export function CardStacks() {
+export async function CardStacks() {
+
+
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stacks`)
+  const { stacksBackEnd, stacksFontEnd, stacksTools } = await data.json() as GetStacksApiResponse
+
   return (
     <Card className="w-full rounded-[.5rem]">
       <CardHeader className="flex flex-row justify-between">

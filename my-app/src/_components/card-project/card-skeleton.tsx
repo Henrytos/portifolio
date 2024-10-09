@@ -15,11 +15,11 @@ export function CardSkeleton() {
         </div>
         <div className="flex h-auto items-center gap-2 mt-4">
           <Button asChild className="rounded-[.5rem]">
-            <Link size={20} /> <span className="ml-2">Visitar</span>
+            <span className="ml-2">Visitar</span>
           </Button>
           <Button asChild variant={"outline"} className="rounded-[.5rem]">
             <a>
-              {" "}
+
               <Github size={20} /> <span className="ml-2">Código fonte</span>
             </a>
           </Button>

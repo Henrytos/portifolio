@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   description: "Minhas habilidade e tecnologias",
 };
 
+export interface Stack {
+  name: string;
+  srcImg: string;
+  type: "front-end" | "back-end" | "tools";
+}
+
+export interface GetStacksApiResponse {
+  stacksFontEnd: Stack[]
+  stacksBackEnd: Stack[]
+  stacksTools: Stack[]
+}
+
+
 export default function StacksPage() {
   return (
     <Container>

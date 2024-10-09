@@ -17,14 +17,14 @@ export default function ProjectsPage() {
     <Container>
       <Title className="mb-2">Meus Projetos</Title>
       <Text className="mb-6">
-        Aqui esta algums Projetos que desenvolvi,todos estão no meu{" "}
+        Aqui esta algums Projetos que desenvolvi,todos estão no meu
         <a
           href="https://github.com/Henrytos"
           target="_blank"
           className="text-primary underline"
         >
           Git Hub <Github size={18} className="inline -translate-y-0.5" />
-        </a>{" "}
+        </a>
       </Text>
       <SubTitle className="mb-4">Front-end</SubTitle>
       <CardConatiner>

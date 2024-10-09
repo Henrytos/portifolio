@@ -8,6 +8,7 @@ import { CardSkeleton } from "@/_components/card-project/card-skeleton";
 import { CardProjects } from "./_components/cards/card-projects";
 import { CardStacks } from "./_components/cards/card-stacks";
 import { CardAboutMe } from "./_components/cards/card-about-me";
+import { StacksSkeleton } from "@/_components/my-stacks/stacks-skeleton";
 
 export default function HomePage() {
   const styleBadge =
@@ -46,7 +47,7 @@ export default function HomePage() {
       <Suspense fallback={<CardSkeleton />}>
         <CardProjects />
       </Suspense>
-      <Suspense fallback={<CardSkeleton />}>
+      <Suspense fallback={<StacksSkeleton />}>
         <CardStacks />
       </Suspense>
     </Container>

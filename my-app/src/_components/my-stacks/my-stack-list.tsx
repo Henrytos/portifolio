@@ -2,12 +2,11 @@ import React from "react";
 import { SubTitle } from "../sub-title";
 import { ContainerStack } from "./containe-stack";
 import { MyStack } from "./my-stack";
-import { stacksFontEnd, stacksBackEnd, stacksTools } from "@/_database/stacks";
+import { GetStacksApiResponse } from "@/app/stacks/page";
 
-
-
-export function MyStackList() {
-
+export async function MyStackList() {
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stacks`)
+  const { stacksBackEnd, stacksFontEnd, stacksTools } = await data.json() as GetStacksApiResponse
   return (
     <>
       <SubTitle className="mb-2">Front end</SubTitle>
