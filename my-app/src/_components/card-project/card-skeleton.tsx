@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, Link } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 
@@ -15,7 +15,7 @@ export function CardSkeleton() {
         </div>
         <div className="flex h-auto items-center gap-2 mt-4">
           <Button asChild className="rounded-[.5rem]">
-            <a>Visitar</a>
+            <Link size={20} /> <span className="ml-2">Visitar</span>
           </Button>
           <Button asChild variant={"outline"} className="rounded-[.5rem]">
             <a>

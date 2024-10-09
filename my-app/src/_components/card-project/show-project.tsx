@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, Link } from "lucide-react";
 import { Text } from "../text";
 import { Button } from "../ui/button";
 import { CardContent, CardTitle } from "../ui/card";
@@ -25,7 +25,7 @@ export function ShowProject(props: any) {
         <div className="flex h-auto items-center lg:justify-end gap-2 mt-2">
           <Button asChild className="rounded-[.5rem]">
             <a href={linkPage} target="_blank">
-              Visitar
+              <Link size={20} /> <span className="ml-2">Visitar</span>
             </a>
           </Button>
           <Button asChild variant={"outline"} className="rounded-[.5rem]">
@@ -45,7 +45,7 @@ export function ShowProject(props: any) {
         <div className="flex h-auto items-center  gap-2 mt-2">
           <Button asChild className="rounded-[.5rem]">
             <a href={linkPage} target="_blank" >
-              Visitar
+              <Link size={20} /> <span className="ml-2">Visitar</span>
             </a>
           </Button>
           <Button asChild variant={"outline"} className="rounded-[.5rem]">

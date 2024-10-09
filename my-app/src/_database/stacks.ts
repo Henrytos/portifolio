@@ -22,6 +22,11 @@ export const myStacks: Stack[] = [
   },
   {
     type: "front-end",
+    name: "php",
+    srcImg: "/imgs/stacks/php.svg",
+  },
+  {
+    type: "front-end",
     name: "Typescript",
     srcImg: "/imgs/stacks/typescript.svg",
   },
@@ -43,7 +48,7 @@ export const myStacks: Stack[] = [
   {
     type: "front-end",
     name: "Next Js",
-    srcImg: "/imgs/stacks/next-js.svg",
+    srcImg: "/imgs/stacks/nextjs.png",
   },
   {
     type: "front-end",
@@ -76,9 +81,44 @@ export const myStacks: Stack[] = [
     srcImg: "/imgs/stacks/react-hook-form.png",
   },
   {
+    type: "front-end",
+    name: "react query",
+    srcImg: "/imgs/stacks/react-query.svg",
+  },
+  {
+    type: "front-end",
+    name: "Zod",
+    srcImg: "/imgs/stacks/zod.svg",
+  },
+  {
+    type: "front-end",
+    name: "cypreess",
+    srcImg: "/imgs/stacks/cypreess.png",
+  },
+  {
+    type: "front-end",
+    name: "stripe",
+    srcImg: "/imgs/stacks/stripe.svg",
+  },
+  {
+    type: "front-end",
+    name: "axios",
+    srcImg: "/imgs/stacks/axios.png",
+  },
+  {
+    type: "front-end",
+    name: "next auth",
+    srcImg: "/imgs/stacks/next-auth.png",
+  },
+  {
     type: "back-end",
     name: "Node Js",
     srcImg: "/imgs/stacks/nodejs.svg",
+  },
+  {
+    type: "back-end",
+    name: "Npm",
+    srcImg: "/imgs/stacks/npm.svg",
   },
   {
     type: "back-end",
@@ -89,6 +129,21 @@ export const myStacks: Stack[] = [
     type: "back-end",
     name: "Express",
     srcImg: "/imgs/stacks/express.svg",
+  },
+  {
+    type: "back-end",
+    name: "Fastify",
+    srcImg: "/imgs/stacks/fastify.svg",
+  },
+  {
+    type: "back-end",
+    name: "NestJs",
+    srcImg: "/imgs/stacks/nestjs.svg",
+  },
+  {
+    type: "back-end",
+    name: "Mysql",
+    srcImg: "/imgs/stacks/mysql.webp",
   },
   {
     type: "back-end",
@@ -107,23 +162,23 @@ export const myStacks: Stack[] = [
   },
   {
     type: "back-end",
-    name: "Sequelize",
-    srcImg: "/imgs/stacks/sequelizejs-icon.svg",
+    name: "Jwt",
+    srcImg: "/imgs/stacks/jwt.svg",
   },
   {
-    type: "tools",
-    name: "VS Code",
-    srcImg: "/imgs/stacks/vscode.svg",
+    type: "back-end",
+    name: "Zod",
+    srcImg: "/imgs/stacks/zod.svg",
   },
   {
-    type: "tools",
-    name: "Figma",
-    srcImg: "/imgs/stacks/figma.svg",
+    type: "back-end",
+    name: "Vitest",
+    srcImg: "/imgs/stacks/zod.svg",
   },
   {
-    type: "tools",
-    name: "Vercel",
-    srcImg: "/imgs/stacks/vercel.svg",
+    type: "back-end",
+    name: "axios",
+    srcImg: "/imgs/stacks/axios.png",
   },
   {
     type: "tools",
@@ -137,8 +192,44 @@ export const myStacks: Stack[] = [
   },
   {
     type: "tools",
+    name: "Figma",
+    srcImg: "/imgs/stacks/figma.svg",
+  },
+  {
+    type: "tools",
+    name: "VS Code",
+    srcImg: "/imgs/stacks/vscode.svg",
+  },
+
+  {
+    type: "tools",
+    name: "Vercel",
+    srcImg: "/imgs/stacks/vercel.svg",
+  },
+  {
+    type: "tools",
     name: "Postman",
     srcImg: "/imgs/stacks/getpostman-icon.svg",
+  },
+  {
+    type: "tools",
+    name: "insomnia",
+    srcImg: "/imgs/stacks/insomnia.svg",
+  },
+  {
+    type: "tools",
+    name: "Notion",
+    srcImg: "/imgs/stacks/notion.svg",
+  },
+  {
+    type: "tools",
+    name: "Render",
+    srcImg: "/imgs/stacks/render.svg",
+  },
+  {
+    type: "tools",
+    name: "cloudflare",
+    srcImg: "/imgs/stacks/cloudflare.webp",
   },
 ];
 

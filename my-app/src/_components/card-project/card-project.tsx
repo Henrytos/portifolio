@@ -2,7 +2,7 @@
 import { Card, CardContent, CardTitle } from "../ui/card";
 import { Text } from "../text";
 import { Button } from "../ui/button";
-import { Github } from "lucide-react";
+import { Github, Link } from "lucide-react";
 import { Dialog } from "../ui/dialog";
 import { DetailsImage } from "./details-image";
 import { TriggerImage } from "./trigger-image";
@@ -25,7 +25,7 @@ export function CardProject(project: Project) {
         <div className="flex h-auto items-center gap-2 mt-auto ">
           <Button asChild className="rounded-[.5rem]">
             <a href={linkPage} target="_blank">
-              Visitar
+              <Link size={20} /> <span className="ml-2">Visitar</span>
             </a>
           </Button>
           <Button asChild variant={"outline"} className="rounded-[.5rem]">

@@ -18,7 +18,7 @@ export function MyPersonSmall() {
           <div>
             <p className="text-sm text-foreground font-medium">Henry Franz</p>
             <p className="text-xs text-muted-foreground  font-light">
-              Front-end Developer
+              Full-stack Developer
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ export function MyPersonSmall() {
         <div>
           <p className="text-sm text-foreground font-medium">Henry Franz</p>
           <p className="text-xs text-muted-foreground  font-light">
-            Front-end Developer
+            Full-stack Developer
           </p>
         </div>
       </div>
