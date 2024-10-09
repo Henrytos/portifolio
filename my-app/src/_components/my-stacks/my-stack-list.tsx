@@ -1,16 +1,18 @@
-import { fetchStacks } from "@/_services/fetchs";
+import React from "react";
 import { SubTitle } from "../sub-title";
 import { ContainerStack } from "./containe-stack";
 import { MyStack } from "./my-stack";
+import { stacksFontEnd, stacksBackEnd, stacksTools } from "@/_database/stacks";
 
-export async function MyStackList() {
-  const { backEnd, frontEnd, tools } = await fetchStacks();
+
+
+export function MyStackList() {
 
   return (
     <>
       <SubTitle className="mb-2">Front end</SubTitle>
       <ContainerStack>
-        {frontEnd.map((stack) => (
+        {stacksFontEnd.map((stack) => (
           <MyStack {...stack} key={stack.name}>
             {stack.name}
           </MyStack>
@@ -19,7 +21,7 @@ export async function MyStackList() {
 
       <SubTitle className="mb-4">Back end</SubTitle>
       <ContainerStack>
-        {backEnd.map((stack) => (
+        {stacksBackEnd.map((stack) => (
           <MyStack {...stack} key={stack.name}>
             {stack.name}
           </MyStack>
@@ -28,7 +30,7 @@ export async function MyStackList() {
 
       <SubTitle className="mb-4">Ferramentas</SubTitle>
       <ContainerStack>
-        {tools.map((stack) => (
+        {stacksTools.map((stack) => (
           <MyStack {...stack} key={stack.name}>
             {stack.name}
           </MyStack>

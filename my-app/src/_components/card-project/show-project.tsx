@@ -5,13 +5,9 @@ import { CardContent, CardTitle } from "../ui/card";
 import { Dialog } from "../ui/dialog";
 import { DetailsImage } from "./details-image";
 import { TriggerImage } from "./trigger-image";
-import { ProjectType } from "@/_types/type-response";
 
-interface ShowProjectProps extends ProjectType {
-  isDifferent?: boolean;
-}
 
-export function ShowProject(props: ShowProjectProps) {
+export function ShowProject(props: any) {
   const { name, description, linkPage, linkRepo, srcImg, isDifferent } = props;
   return isDifferent ? (
     <CardContent className="flex flex-col  lg:flex-row lg:justify-between">
@@ -48,7 +44,7 @@ export function ShowProject(props: ShowProjectProps) {
         <Text isDifferent={true}>{description}</Text>
         <div className="flex h-auto items-center  gap-2 mt-2">
           <Button asChild className="rounded-[.5rem]">
-            <a href={linkPage} target="_blank">
+            <a href={linkPage} target="_blank" >
               Visitar
             </a>
           </Button>

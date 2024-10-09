@@ -1,4 +1,3 @@
-import { fetchStacks } from "@/_services/fetchs";
 import {
   Card,
   CardContent,
@@ -9,9 +8,9 @@ import { ContainerStack } from "@/_components/my-stacks/containe-stack";
 import { MyStack } from "@/_components/my-stacks/my-stack";
 import { CardLink } from "./card-link";
 import { Laptop } from "lucide-react";
+import { stacksFontEnd } from "@/_database/stacks";
 
-export async function CardStacks() {
-  const { frontEnd } = await fetchStacks();
+export function CardStacks() {
   return (
     <Card className="w-full rounded-[.5rem]">
       <CardHeader className="flex flex-row justify-between">
@@ -22,7 +21,7 @@ export async function CardStacks() {
       </CardHeader>
       <CardContent className="flex flex-wrap gap-2">
         <ContainerStack>
-          {frontEnd.map((stack) => (
+          {stacksFontEnd.map((stack) => (
             <MyStack {...stack} key={stack.name}>
               {stack.name}
             </MyStack>

@@ -1,14 +1,15 @@
-import { StackType } from "@/_types/type-response";
+
 import Image from "next/image";
 import { ReactNode } from "react";
 import { Text } from "../text";
 
-interface MyStackProps extends StackType {
+interface MyStackProps {
+  srcImg: string;
   children: ReactNode;
 }
 
 export function MyStack(stack: MyStackProps) {
-  const {  srcImg, children } = stack;
+  const { srcImg, children } = stack;
 
   return (
     <span
@@ -25,7 +26,7 @@ export function MyStack(stack: MyStackProps) {
         />
       </div>
 
-      <Text clasName="text-xs sm:text-sm">{children}</Text>
+      <Text className="text-xs sm:text-sm">{children}</Text>
     </span>
   );
 }

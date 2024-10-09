@@ -16,7 +16,7 @@ export default function ProjectsPage() {
   return (
     <Container>
       <Title className="mb-2">Meus Projetos</Title>
-      <Text clasName="mb-6">
+      <Text className="mb-6">
         Aqui esta algums Projetos que desenvolvi,todos estão no meu{" "}
         <a
           href="https://github.com/Henrytos"

@@ -19,7 +19,8 @@ export function NavigationLink({
 
   return (
     <Link
-      href={href ?? ""}
+      href={href ?? "/"}
+      prefetch={false}
       className={clsx(
         "group flex gap-2 items-center py-2 px-4 bg-background  hover:bg-secondary transition-colors ",
         linkActive && "bg-secondary"

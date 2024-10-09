@@ -5,13 +5,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/_components/ui/carousel";
+import { animesFavorite } from "@/_database/animes";
+import { Poster, seriesFavorites } from "@/_database/series";
 import Image from "next/image";
 
-interface Poster {
-  id: number;
-  name: string;
-  img: string;
-}
+
 
 function CarouselPosters({ posters }: { posters: Poster[] }) {
   return (
@@ -39,60 +37,13 @@ function CarouselPosters({ posters }: { posters: Poster[] }) {
 }
 
 export function AnimesFavoites() {
-  const favoriteAnimes: Poster[] = [
-    {
-      id: 1,
-      name: "Sousou no Frieren",
-      img: "snf.jpeg",
-    },
-    {
-      id: 2,
-      name: "Blue lock",
-      img: "blue-lock.jpg",
-    },
-    {
-      id: 3,
-      name: "Jujutsu Kaisen",
-      img: "jujutsu.jpg",
-    },
-    {
-      id: 4,
-      name: "JOJO",
-      img: "jojo.jpg",
-    },
-    {
-      id: 5,
-      name: "Baki",
-      img: "baki.jpg",
-    },
-    {
-      id: 6,
-      name: "Recor of Ragnaarok",
-      img: "RoR.jpg",
-    },
-  ];
 
-  return <CarouselPosters posters={favoriteAnimes} />;
+
+  return <CarouselPosters posters={animesFavorite} />;
 }
 
 export function SeriesFavorites() {
-  const serieFavorites: Poster[] = [
-    {
-      id: 1,
-      name: "Supernatural",
-      img: "supernatural.jpg",
-    },
-    {
-      id: 2,
-      name: "The Bing Bang Theory",
-      img: "bbt.webp",
-    },
-    {
-      id: 3,
-      name: "yuyu hakusho",
-      img: "yhks.webp",
-    },
-  ];
 
-  return <CarouselPosters posters={serieFavorites} />;
+
+  return <CarouselPosters posters={seriesFavorites} />;
 }

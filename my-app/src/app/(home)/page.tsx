@@ -26,7 +26,7 @@ export default function HomePage() {
         <div className="pt-2 flex flex-col justify-between ">
           <div>
             <Title>Henry Franz</Title>
-            <Text isDifferent={true} data-aos="fade-up" clasName="transitions">
+            <Text isDifferent={true} data-aos="fade-up" className="transitions">
               Desenvolvedor Front-End
             </Text>
           </div>

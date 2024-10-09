@@ -15,7 +15,7 @@ export default function StacksPage() {
   return (
     <Container>
       <Title className="mb-2">Tecnologias e Ferramentas</Title>
-      <Text isDifferent={true} clasName="mb-6">
+      <Text isDifferent={true} className="mb-6">
         Aqui estão algumas tecnologias e ferramentas que eu uso no meu dia a dia
         de desenvolvimento. desde front-end até back-end
       </Text>

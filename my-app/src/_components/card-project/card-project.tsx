@@ -1,4 +1,4 @@
-import { ProjectType } from "@/_types/type-response";
+
 import { Card, CardContent, CardTitle } from "../ui/card";
 import { Text } from "../text";
 import { Button } from "../ui/button";
@@ -6,8 +6,9 @@ import { Github } from "lucide-react";
 import { Dialog } from "../ui/dialog";
 import { DetailsImage } from "./details-image";
 import { TriggerImage } from "./trigger-image";
+import { Project } from "@/_database/projects";
 
-export async function CardProject(project: ProjectType) {
+export function CardProject(project: Project) {
   const { name, description, linkPage, linkRepo, srcImg } = project;
 
   return (

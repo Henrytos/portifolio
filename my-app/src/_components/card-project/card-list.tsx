@@ -1,14 +1,15 @@
-import { fetchProjects } from "@/_services/fetchs";
+import React from "react";
 import { CardProject } from "./card-project";
 import { Suspense } from "react";
 import { CardSkeleton } from "./card-skeleton";
+import { projects } from "@/_database/projects"
 
-export async function CardProjectList() {
-  const Projects = await fetchProjects();
+export function CardProjectList() {
+
 
   return (
     <>
-      {Projects.map((project) => (
+      {projects.map((project) => (
         <Suspense fallback={<CardSkeleton />} key={project.id}>
           <CardProject {...project} key={project.name} />
         </Suspense>
