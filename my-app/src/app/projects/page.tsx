@@ -12,6 +12,16 @@ export const metadata: Metadata = {
   description: "Meus projetos",
 };
 
+export interface Project {
+  id: string;
+  name: string;
+  description: string;
+  linkPage: string;
+  linkRepo: string;
+  srcImg: string;
+  isFavorite?: boolean;
+}
+
 export default function ProjectsPage() {
   return (
     <Container>
