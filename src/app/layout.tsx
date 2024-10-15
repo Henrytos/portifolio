@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" suppressHydrationWarning={true}>
       <body
         className={cn(
           "text-foreground flex  flex-col lg:flex-row font-sans antialiased  bg-background relative",
@@ -36,8 +36,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SideBar />
+          <span className=" w-full max-w-72 lg:block hidden" />
           <NavBar />
-          <div className="flex-1 lg:overflow-auto">{children}</div>
+          <div className="flex-1 lg:overflow-auto ">{children}</div>
         </ThemeProvider>
       </body>
     </html>

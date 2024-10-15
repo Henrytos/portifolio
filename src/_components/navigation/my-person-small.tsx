@@ -13,7 +13,7 @@ export function MyPersonSmall() {
             src="/imgs/icon.jpeg"
             width={36}
             height={36}
-            className="rounded object-cover"
+            className="rounded object-cover  w-9 h-9"
           />
           <div>
             <p className="text-sm text-foreground font-medium">Henry Franz</p>
@@ -29,7 +29,7 @@ export function MyPersonSmall() {
           src="/imgs/icon.jpeg"
           width={36}
           height={36}
-          className="rounded object-cover"
+          className="rounded object-cover w-9 h-9"
         />
         <div>
           <p className="text-sm text-foreground font-medium">Henry Franz</p>

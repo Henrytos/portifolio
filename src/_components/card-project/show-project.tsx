@@ -1,4 +1,4 @@
-import { Github, Link } from "lucide-react";
+import { Github, Link, Link2 } from "lucide-react";
 import { Text } from "../text";
 import { Button } from "../ui/button";
 import { CardContent, CardTitle } from "../ui/card";
@@ -15,16 +15,17 @@ export function ShowProject(props: any) {
         <TriggerImage
           name={name}
           srcImg={srcImg}
-          className="h-56 w-96   lg:m-0  max-w-sm"
+          className="h-56 w-96  lg:m-0 max-w-sm"
         />
         <DetailsImage name={name} srcImg={srcImg} />
       </Dialog>
-      <article className="flex flex-col justify-center gap-1 text-left lg:text-right">
+      <article className="flex flex-col justify-center gap-1 w-full text-left lg:text-right">
         <CardTitle className="mb-1.5 text-lg lg:text-xl">{name}</CardTitle>
         <Text isDifferent={true}>{description}</Text>
         <div className="flex h-auto items-center lg:justify-end gap-2 mt-2">
           <Button asChild className="rounded-[.5rem]">
             <a href={linkPage} target="_blank">
+              <Link size={20} />
               <span className="ml-2">Visitar</span>
             </a>
           </Button>
@@ -45,12 +46,12 @@ export function ShowProject(props: any) {
         <div className="flex h-auto items-center  gap-2 mt-2">
           <Button asChild className="rounded-[.5rem]">
             <a href={linkPage} target="_blank" >
+              <Link size={20} />
               <span className="ml-2">Visitar</span>
             </a>
           </Button>
           <Button asChild variant={"outline"} className="rounded-[.5rem]">
             <a href={linkRepo} target="_blank">
-
               <Github size={20} /> <span className="ml-2">Código fonte</span>
             </a>
           </Button>
@@ -60,7 +61,7 @@ export function ShowProject(props: any) {
         <TriggerImage
           name={name}
           srcImg={srcImg}
-          className="h-56 w-full max-w-sm"
+          className="h-56 w-full max-w-sm  ml-auto"
         />
         <DetailsImage name={name} srcImg={srcImg} />
       </Dialog>

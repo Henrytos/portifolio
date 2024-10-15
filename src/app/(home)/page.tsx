@@ -9,6 +9,7 @@ import { CardProjects } from "./_components/cards/card-projects";
 import { CardStacks } from "./_components/cards/card-stacks";
 import { CardAboutMe } from "./_components/cards/card-about-me";
 import { StacksSkeleton } from "@/_components/my-stacks/stacks-skeleton";
+import { CardProjectsSkeleton } from "./_components/cards/card-projects-skeleton";
 
 export default function HomePage() {
   const styleBadge =
@@ -30,23 +31,21 @@ export default function HomePage() {
             <Text isDifferent={true} data-aos="fade-up" className="transitions">
               Desenvolvedor Front-End
             </Text>
-          </div>
-          <div className="space-x-1.5">
-            <Badge className={styleBadge}>NextJs</Badge>
-            <Badge className={styleBadge}>React</Badge>
-            <Badge className={styleBadge}>TypeScript</Badge>
-            <Badge className={styleBadge}>JavaScript</Badge>
-            <Badge className={styleBadge}>NodeJs</Badge>
-            <Badge className={styleBadge}>Express</Badge>
+            <div className="space-x-1.5">
+              <Badge className={styleBadge}>NextJs</Badge>
+              <Badge className={styleBadge}>React</Badge>
+              <Badge className={styleBadge}>TypeScript</Badge>
+              <Badge className={styleBadge}>JavaScript</Badge>
+              <Badge className={styleBadge}>NodeJs</Badge>
+              <Badge className={styleBadge}>Express</Badge>
+            </div>
           </div>
         </div>
       </div>
-      <Suspense fallback={<CardSkeleton />}>
-        <CardAboutMe />
-      </Suspense>
-      <Suspense fallback={<CardSkeleton />}>
-        <CardProjects />
-      </Suspense>
+
+      <CardAboutMe />
+      <CardProjects />
+
       <Suspense fallback={<StacksSkeleton />}>
         <CardStacks />
       </Suspense>

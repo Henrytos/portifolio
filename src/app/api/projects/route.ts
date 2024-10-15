@@ -26,7 +26,7 @@ export async function GET() {
       id: "2",
       name: "Academia Xhealth",
       description:
-        "Aplicação web feita como desafio de um hackaton onde o intuito é fazer um Site de uma academia imaginária",
+        "Aplicação web feita como desafio de um hackaton , academia Xhealth",
       linkPage: "https://academia-xhealth.vercel.app/",
       linkRepo: "https://github.com/Henrytos/Academia-XHEALTH",
       srcImg: "/imgs/projects/academia-x-health.png",

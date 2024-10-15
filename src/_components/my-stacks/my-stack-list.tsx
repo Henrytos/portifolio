@@ -8,33 +8,39 @@ export async function MyStackList() {
   const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stacks`)
   const { stacksBackEnd, stacksFontEnd, stacksTools } = await data.json() as GetStacksApiResponse
   return (
-    <>
-      <SubTitle className="mb-2">Front end</SubTitle>
-      <ContainerStack>
-        {stacksFontEnd.map((stack) => (
-          <MyStack {...stack} key={stack.name}>
-            {stack.name}
-          </MyStack>
-        ))}
-      </ContainerStack>
+    <div className="space-y-10">
+      <section>
+        <SubTitle className="mb-2">Front end</SubTitle>
+        <ContainerStack>
+          {stacksFontEnd.map((stack) => (
+            <MyStack srcImg={stack.srcImg} key={stack.name}>
+              {stack.name}
+            </MyStack>
+          ))}
+        </ContainerStack>
 
-      <SubTitle className="mb-4">Back end</SubTitle>
-      <ContainerStack>
-        {stacksBackEnd.map((stack) => (
-          <MyStack {...stack} key={stack.name}>
-            {stack.name}
-          </MyStack>
-        ))}
-      </ContainerStack>
+      </section>
+      <section>
+        <SubTitle className="mb-4">Back end</SubTitle>
+        <ContainerStack>
+          {stacksBackEnd.map((stack) => (
+            <MyStack srcImg={stack.srcImg} key={stack.name}>
+              {stack.name}
+            </MyStack>
+          ))}
+        </ContainerStack>
+      </section>
 
-      <SubTitle className="mb-4">Ferramentas</SubTitle>
-      <ContainerStack>
-        {stacksTools.map((stack) => (
-          <MyStack {...stack} key={stack.name}>
-            {stack.name}
-          </MyStack>
-        ))}
-      </ContainerStack>
-    </>
+      <section>
+        <SubTitle className="mb-4">Ferramentas</SubTitle>
+        <ContainerStack>
+          {stacksTools.map((stack) => (
+            <MyStack srcImg={stack.srcImg} key={stack.name}>
+              {stack.name}
+            </MyStack>
+          ))}
+        </ContainerStack>
+      </section>
+    </div>
   );
 }

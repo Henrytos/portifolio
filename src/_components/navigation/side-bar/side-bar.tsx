@@ -18,7 +18,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export function SideBar() {
   return (
-    <div className="hidden lg:block w-full max-w-72 bg-background/45 ">
+    <div className="hidden lg:block w-full max-w-72 bg-background/45 fixed ">
       <aside className="min-h-[calc(100vh_-_3.5rem)] text-foreground border-r pt-4 ">
         <MyPersonSmall />
 

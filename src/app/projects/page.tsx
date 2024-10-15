@@ -3,7 +3,7 @@ import { Title } from "@/_components/title";
 import { Text } from "@/_components/text";
 import { Github } from "lucide-react";
 import { SubTitle } from "@/_components/sub-title";
-import { CardConatiner } from "@/_components/card-project/card-conatiner";
+import { CardContainer } from "@/_components/card-project/card-container";
 import { Container } from "@/_components/container";
 import { CardProjectList } from "@/_components/card-project/card-list";
 
@@ -22,6 +22,10 @@ export interface Project {
   isFavorite?: boolean;
 }
 
+export interface  GetProjectsApiResponse{
+  projects: Project[]
+}
+
 export default function ProjectsPage() {
   return (
     <Container>
@@ -37,9 +41,9 @@ export default function ProjectsPage() {
         </a>
       </Text>
       <SubTitle className="mb-4">Front-end</SubTitle>
-      <CardConatiner>
+      <CardContainer>
         <CardProjectList />
-      </CardConatiner>
+      </CardContainer>
     </Container>
   );
 }

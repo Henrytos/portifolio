@@ -15,9 +15,10 @@ export function DetailsImage({ srcImg, name, className }: DetailsImageProps) {
         <Image
           alt={name}
           src={srcImg}
-          width={2000}
-          height={2000}
+          width={800}
+          height={800}
           className={clsx("rounded-xl w-full", className)}
+          priority={false}
         />
       </div>
     </DialogContent>

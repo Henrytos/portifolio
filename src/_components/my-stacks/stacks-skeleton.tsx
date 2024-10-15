@@ -1,10 +1,11 @@
+"use client"
 import React from "react";
 import { SubTitle } from "../sub-title";
 import { ContainerStack } from "./containe-stack";
 
 export function StacksSkeleton() {
   return (
-    <>
+    <div>
       <SubTitle className="mb-2">Front end</SubTitle>
       <ContainerStack>
         {Array.from({ length: 8 }).map((_, index) => (
@@ -21,6 +22,6 @@ export function StacksSkeleton() {
           </div>
         ))}
       </ContainerStack>
-    </>
+    </div>
   );
 }

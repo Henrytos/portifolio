@@ -1,4 +1,5 @@
-export default function LoadingAboutMe() {
+
+export default function LoadingPage() {
   return (
     <div className="min-h-screen lg:min-h-full grid place-content-center">
       <svg

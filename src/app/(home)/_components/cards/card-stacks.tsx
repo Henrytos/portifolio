@@ -14,7 +14,7 @@ export async function CardStacks() {
 
 
   const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stacks`)
-  const { stacksBackEnd, stacksFontEnd, stacksTools } = await data.json() as GetStacksApiResponse
+  const { stacksFontEnd } = await data.json() as GetStacksApiResponse
 
   return (
     <Card className="w-full rounded-[.5rem]">
