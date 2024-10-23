@@ -17,8 +17,8 @@ export function CardProject(project: Project) {
       <CardContent className="w-full h-full flex flex-col justify-between gap-y-6">
         <div className="space-y-4">
           <Dialog>
-            <TriggerImage name={name} srcImg={srcImg} className="h-60" />
-            <DetailsImage name={name} srcImg={srcImg} />
+            <TriggerImage name={name} srcImg={srcImg.toString()} className="h-60" />
+            <DetailsImage name={name} srcImg={srcImg.toString()} />
           </Dialog>
           <CardTitle className="mb-1.5">{name}</CardTitle>
           <Text isDifferent={true}>{description}</Text>

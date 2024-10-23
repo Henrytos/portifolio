@@ -15,10 +15,10 @@ function CarouselPosters({ posters }: { posters: Poster[] }) {
   return (
     <Carousel className="lg:w-full m-auto">
       <CarouselContent>
-        {posters.map((item) => (
+        {posters.map((item, i) => (
           <CarouselItem
             className="basis-1/2 md:basis-2/5 lg:basis-1/3"
-            key={item.id}
+            key={i}
           >
             <Image
               src={`/imgs/about-me/${item.img}`}

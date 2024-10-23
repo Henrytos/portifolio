@@ -11,11 +11,15 @@ import { Laptop } from "lucide-react";
 import { GetStacksApiResponse } from "@/app/stacks/page";
 
 export async function CardStacks() {
+  // const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stacks`)
+  // const { stacksFontEnd } = await data.json() as GetStacksApiResponse
 
-
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stacks`)
-  const { stacksFontEnd } = await data.json() as GetStacksApiResponse
-
+  const stacksFontEnd: any[] = [
+    {
+      name: "React",
+      srcImg: "/images/stacks/react.svg",
+    }
+  ]
   return (
     <Card className="w-full rounded-[.5rem]">
       <CardHeader className="flex flex-row justify-between">
@@ -26,8 +30,8 @@ export async function CardStacks() {
       </CardHeader>
       <CardContent className="flex flex-wrap gap-2">
         <ContainerStack>
-          {stacksFontEnd.map((stack) => (
-            <MyStack {...stack} key={stack.name}>
+          {stacksFontEnd.map((stack, i) => (
+            <MyStack {...stack} key={i}>
               {stack.name}
             </MyStack>
           ))}

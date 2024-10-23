@@ -19,7 +19,7 @@ export default function HomePage() {
     <Container className="space-y-6">
       <div className="flex  gap-4 h-28 " data-aos="fade-up">
         <Image
-          src="/imgs/icon.jpeg"
+          src="/imgs/icon.jpg"
           alt="my person"
           width={200}
           height={200}

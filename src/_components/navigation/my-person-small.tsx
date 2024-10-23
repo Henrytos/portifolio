@@ -10,7 +10,7 @@ export function MyPersonSmall() {
         <div className="flex gap-2">
           <Image
             alt="foto de henry"
-            src="/imgs/icon.jpeg"
+            src="/imgs/icon.jpg"
             width={36}
             height={36}
             className="rounded object-cover  w-9 h-9"
@@ -26,7 +26,7 @@ export function MyPersonSmall() {
       <div className="flex gap-2 lg:hidden">
         <Image
           alt="foto de henry"
-          src="/imgs/icon.jpeg"
+          src="/imgs/icon.jpg"
           width={36}
           height={36}
           className="rounded object-cover w-9 h-9"

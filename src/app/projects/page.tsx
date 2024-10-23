@@ -6,6 +6,8 @@ import { SubTitle } from "@/_components/sub-title";
 import { CardContainer } from "@/_components/card-project/card-container";
 import { Container } from "@/_components/container";
 import { CardProjectList } from "@/_components/card-project/card-list";
+import { Suspense } from "react";
+import { CardSkeleton } from "@/_components/card-project/card-skeleton";
 
 export const metadata: Metadata = {
   title: "Projetos",
@@ -22,7 +24,7 @@ export interface Project {
   isFavorite?: boolean;
 }
 
-export interface  GetProjectsApiResponse{
+export interface GetProjectsApiResponse {
   projects: Project[]
 }
 
@@ -42,7 +44,9 @@ export default function ProjectsPage() {
       </Text>
       <SubTitle className="mb-4">Front-end</SubTitle>
       <CardContainer>
-        <CardProjectList />
+        <Suspense fallback={Array.from({ length: 6 }).map((_, i) => <CardSkeleton key={i} />)}>
+          <CardProjectList />
+        </Suspense>
       </CardContainer>
     </Container>
   );
