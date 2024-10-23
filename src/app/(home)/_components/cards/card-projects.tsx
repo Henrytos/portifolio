@@ -5,12 +5,9 @@ import { CardLink } from "./card-link";
 import { GetProjectsApiResponse } from "@/app/projects/page";
 
 export async function CardProjects() {
-  // const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`)
-  // const { projects } = await data.json() as GetProjectsApiResponse
-  // const myFavoritesProject = projects.filter((project) => project.isFavorite)
-
-  const myFavoritesProject: any[] = []
-
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`)
+  const { projects } = await data.json() as GetProjectsApiResponse
+  const myFavoritesProject = projects.filter((project) => project.isFavorite)
 
   return (
     <Card className="w-full rounded-[.5rem]">

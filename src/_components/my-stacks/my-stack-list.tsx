@@ -5,19 +5,17 @@ import { MyStack } from "./my-stack";
 import { GetStacksApiResponse } from "@/app/stacks/page";
 
 export async function MyStackList() {
-  // const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stacks`)
-  // const { stacksBackEnd, stacksFontEnd, stacksTools } = await data.json() as GetStacksApiResponse
-  const stacksBackEnd: any[] = []
-  const stacksFontEnd: any[] = []
-  const stacksTools: any[] = []
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stacks`)
+  const { stacksBackEnd, stacksFontEnd, stacksTools } = await data.json() as GetStacksApiResponse
+
 
   return (
     <div className="space-y-10">
       <section>
         <SubTitle className="mb-2">Front end</SubTitle>
         <ContainerStack>
-          {stacksFontEnd.map((stack, i) => (
-            <MyStack srcImg={stack.srcImg} key={i}>
+          {stacksFontEnd.map((stack) => (
+            <MyStack srcImg={stack.srcImg} key={stack.name}>
               {stack.name}
             </MyStack>
           ))}
@@ -27,8 +25,8 @@ export async function MyStackList() {
       <section>
         <SubTitle className="mb-4">Back end</SubTitle>
         <ContainerStack>
-          {stacksBackEnd.map((stack, i) => (
-            <MyStack srcImg={stack.srcImg} key={i}>
+          {stacksBackEnd.map((stack) => (
+            <MyStack srcImg={stack.srcImg} key={stack.name}>
               {stack.name}
             </MyStack>
           ))}
